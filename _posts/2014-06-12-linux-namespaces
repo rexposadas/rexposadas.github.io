@@ -1,0 +1,14 @@
+Linux Namespaces
+================
+
+This following post is an exercise in Linux namespaces.  What we will try to accomplish is what you see below [insert image]. 
+
+![namespace](/images/namespaces.jpg)
+
+
+These are the properties of this model:
+
+1. The host machine can ping namespace 1 (ns1).  
+2. Ns1 can ping namespace2 (ns2) and vice versa.
+3. the host machine cannot ping ns2 and vice versa.
+
