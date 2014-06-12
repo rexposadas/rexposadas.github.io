@@ -7,7 +7,7 @@ categories: linux
 
 This following post is an exercise in Linux namespaces.  The images below shows what we will build. This is an exercise derived from the following [tutorial](http://blog.scottlowe.org/2013/09/04/introducing-linux-network-namespaces/). 
 
-Allthe commands in this post should be executed as `root`.
+All the commands in this post should be executed as `root`.
 
 I wrote a [bash script](https://gist.github.com/rexposadas/6ac98e2f421e609ec842) that you can run to get the desired setup.  
 
