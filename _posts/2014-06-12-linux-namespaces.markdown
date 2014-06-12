@@ -6,7 +6,7 @@ categories: linux
 ---
 
 This following post is an exercise in Linux namespaces.  What we will try to accomplish is what you see below. 
-This is an exercise derived from the following [tutorial](http://blog.scottlowe.org/2013/09/04/introducing-linux-network-namespaces/)
+This is an exercise derived from the following [tutorial](http://blog.scottlowe.org/2013/09/04/introducing-linux-network-namespaces/). You will need to execute the bash script as well as the examples in this post as `root`.
 
 You can see the [Gist](https://gist.github.com/rexposadas/6ac98e2f421e609ec842).
 The Gist is a bash script which you can execute to get the setup setup below.
@@ -22,40 +22,40 @@ The following setup has these properties:
 
 Create the namespaces.
 
-    ip netns add ns1
-    ip netns add ns2
+    $ ip netns add ns1
+    $ ip netns add ns2
  
 check that the namespaces has been created.  After running the command you should 
 see ns1 and ns2 in the list.
 
-    ip netns list
+    $ ip netns list
  
 Create the virtual ethernet pairs
 
-    ip link add v1 type veth peer name v11
-    ip link add v2 type veth peer name v22
+    $ ip link add v1 type veth peer name v11
+    $ ip link add v2 type veth peer name v22
  
 Verify that the veth pairs were created
     
-    ip link list
+    $ ip link list
  
 Move the virtual ethernet pairs around to match the image above.
 
-    ip link set v11 netns ns1
-    ip link set v2 netns ns1
-    ip link set v22 netns ns2
+    $ ip link set v11 netns ns1
+    $ ip link set v2 netns ns1
+    $ ip link set v22 netns ns2
  
-Verify that we set the links correctly
+Verify that we set the links correctly. 
 
-    ip netns exec ns1 ip route list  # you should see v11 and v2
-    ip netns exec ns2 ip route list  # you should see v22
+    $ ip netns exec ns1 ip route list  # you should see v11 and v2
+    $ ip netns exec ns2 ip route list  # you should see v22
  
-Configure interfaces
+Configure interfaces. 
 
-    ifconfig v1 10.1.1.1/24 up
-    ip netns exec ns1 ifconfig v11 10.1.1.2/24 up
-    ip netns exec ns1 ifconfig v2 20.1.1.1/24 up    
-    ip netns exec ns2 ifconfig v22 20.1.1.2/24 up
+    $ ifconfig v1 10.1.1.1/24 up
+    $ ip netns exec ns1 ifconfig v11 10.1.1.2/24 up
+    $ ip netns exec ns1 ifconfig v2 20.1.1.1/24 up    
+    $ ip netns exec ns2 ifconfig v22 20.1.1.2/24 up
 
 
 Taking a look at the image again and revisit it's expected behavior: 
