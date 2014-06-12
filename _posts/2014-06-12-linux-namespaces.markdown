@@ -66,9 +66,9 @@ Taking a look at the image again and revisit it's expected behavior:
 
 ### The host should be able to ping ns1, but not n2.  In the host machine do the following:
 
-    $ ping 10.1.1.2  // configured for v11. this should succeed.     
-    $ ping 20.1.1.2  // configured for v22 on ns2. this should fail. 
-    $ ping 20.1.1.1  // configured for v2 on ns2.  this should fail. the v2/v22 pair connects ns1 with n2.
+    $ ping 10.1.1.2  // configured for v11. this succeeds.     
+    $ ping 20.1.1.2  // configured for v22 on ns2. this fails. 
+    $ ping 20.1.1.1  // configured for v2.  this fails. the v2/v22 pair connects ns1 with n2.
     
     
 ### Ns1 should be able to ping the host and ns2. 
