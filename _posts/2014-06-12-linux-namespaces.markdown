@@ -66,20 +66,20 @@ Taking a look at the image again and revisit it's expected behavior:
 
 ### The host should be able to ping ns1, but not n2.  In the host machine do the following:
 
-    $ ping 10.1.1.2  // configured for v11. this succeeds.     
-    $ ping 20.1.1.2  // configured for v22 on ns2. this fails. 
-    $ ping 20.1.1.1  // configured for v2.  this fails. the v2/v22 pair connects ns1 with n2.
+    $ ping 10.1.1.2  // v11. succeeds.     
+    $ ping 20.1.1.2  // v22 on ns2. fails. 
+    $ ping 20.1.1.1  // v2. fails. the v2/v22 pair connects ns1 with n2.
     
     
 ### Ns1 should be able to ping the host and ns2. 
     
-    $ ip netns exec ns1 ping 10.1.1.1 // configured for the host.  this succeeds.
-    $ ip netns exec ns1 ping 20.1.1.2 // configured for ns2.  This succeeds. 
+    $ ip netns exec ns1 ping 10.1.1.1 // host. succeeds.
+    $ ip netns exec ns1 ping 20.1.1.2 // ns2. succeeds. 
         
 ### Ns2 should be able to ping ns1, but not the host. 
         
-    $ ip netns exec ns2 ping 20.1.1.1 // configured for ns1. this succeeds. 
-    $ ip netns exec ns2 ping 10.1.1.1 // configured for the host. this fails. 
+    $ ip netns exec ns2 ping 20.1.1.1 // ns1. succeeds. 
+    $ ip netns exec ns2 ping 10.1.1.1 // host. fails. 
         
         
 
