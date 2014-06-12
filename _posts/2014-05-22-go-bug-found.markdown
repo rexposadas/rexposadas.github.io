@@ -1,11 +1,9 @@
-<!---
 ---
 layout: post
 title:  "Go bug found"
 date:   2014-05-22 18:41:55
 categories: go
 ---
--->
 
 I found an interesting bug in Go1.2.  
 
