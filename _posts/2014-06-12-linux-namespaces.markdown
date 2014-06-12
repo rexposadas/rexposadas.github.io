@@ -64,7 +64,6 @@ Taking a look at the image again and revisit it's expected behavior:
     $ ping 20.1.1.2  // v22 on ns2. fails. 
     $ ping 20.1.1.1  // v2. fails. the v2/v22 pair connects ns1 with n2.
     
-    
 ### Ns1 should be able to ping v1 and v22. 
     
     $ ip netns exec ns1 ping 10.1.1.1 // host. succeeds.
