@@ -74,7 +74,7 @@ Taking a look at the image again and revisit it's expected behavior:
 ### Ns1 should be able to ping the host and ns2. 
     
     $ ip netns exec ns1 ping 10.1.1.1 // configured for the host.  this succeeds.
-    $ ip netns exec ns1 ping 20.1.1.2 // configured for ns2.  This fails. 
+    $ ip netns exec ns1 ping 20.1.1.2 // configured for ns2.  This succeeds. 
         
 ### Ns2 should be able to ping ns1, but not the host. 
         
