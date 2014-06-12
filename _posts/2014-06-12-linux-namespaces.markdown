@@ -13,12 +13,6 @@ I wrote a [bash script](https://gist.github.com/rexposadas/6ac98e2f421e609ec842)
 
 <img src="/images/namespaces.jpg" alt="Drawing" style="width: 700px;height: 400px;"/>
 
-The following setup has these properties:
-
-1. The host should be able to ping ns1, but not ns2.
-2. Ns1 should be able to ping the host and ns2.
-3. Ns2 should be able to ping ns1, but not the host.
-
 
 Create the namespaces.
 
@@ -64,19 +58,19 @@ Taking a look at the image again and revisit it's expected behavior:
 
 ## Testing our setup.
 
-### The host should be able to ping ns1, but not n2.  In the host machine do the following:
+### The host should be able to ping v11, but not v2 nor v22.  In the host machine do the following:
 
     $ ping 10.1.1.2  // v11. succeeds.     
     $ ping 20.1.1.2  // v22 on ns2. fails. 
     $ ping 20.1.1.1  // v2. fails. the v2/v22 pair connects ns1 with n2.
     
     
-### Ns1 should be able to ping the host and ns2. 
+### Ns1 should be able to ping v1 and v22. 
     
     $ ip netns exec ns1 ping 10.1.1.1 // host. succeeds.
     $ ip netns exec ns1 ping 20.1.1.2 // ns2. succeeds. 
         
-### Ns2 should be able to ping ns1, but not the host. 
+### Ns2 should be able to ping v2, but not v1. 
         
     $ ip netns exec ns2 ping 20.1.1.1 // ns1. succeeds. 
     $ ip netns exec ns2 ping 10.1.1.1 // host. fails. 
