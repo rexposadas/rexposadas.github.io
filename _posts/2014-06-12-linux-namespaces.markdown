@@ -78,8 +78,8 @@ Taking a look at the image again and revisit it's expected behavior:
         
 ### Ns2 should be able to ping ns1, but not the host. 
         
-    $ ip netns exec ns1 ping 20.1.1.1 // configured for ns1. this succeeds. 
-    $ ip netns exec ns1 ping 10.1.1.1 // configured for the host. this fails. 
+    $ ip netns exec ns2 ping 20.1.1.1 // configured for ns1. this succeeds. 
+    $ ip netns exec ns2 ping 10.1.1.1 // configured for the host. this fails. 
         
         
 
