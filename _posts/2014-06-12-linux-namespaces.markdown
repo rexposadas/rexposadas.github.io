@@ -8,7 +8,7 @@ categories: linux
 This following post is an exercise in Linux namespaces.  What we will try to accomplish is what you see below. 
 This is an exercise derived from the following [tutorial](http://blog.scottlowe.org/2013/09/04/introducing-linux-network-namespaces/)
 
-You can see the Gist here: https://gist.github.com/rexposadas/6ac98e2f421e609ec842
+You can see the [Gist](https://gist.github.com/rexposadas/6ac98e2f421e609ec842).
 The Gist is a bash script which you can execute to get the setup setup below.
 
 <img src="/images/namespaces.jpg" alt="Drawing" style="width: 700px;height: 400px;"/>
