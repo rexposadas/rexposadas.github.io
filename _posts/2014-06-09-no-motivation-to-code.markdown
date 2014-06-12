@@ -5,8 +5,6 @@ date:   2014-06-09 18:41:55
 categories: go
 ---
 
-# Why?
-
 From time-to-time I get into a situation where I have *interesting* projects to work on, but I 
 do not feel like coding. I can't bring myself to start typing and make create.  The reason why 
 I became a programmer was because I wanted to create, and not that I have the chance, why do I feel
