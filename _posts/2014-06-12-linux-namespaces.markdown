@@ -20,7 +20,7 @@ The following setup has these properties:
 3. Ns2 should be able to ping ns1, but not the host.
 
 
-Create the namespaces
+Create the namespaces.
 
     ip netns add ns1
     ip netns add ns2
