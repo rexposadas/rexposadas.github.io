@@ -1,11 +1,9 @@
-<!---
 ---
 layout: post
 title:  "Building a system from scratch"
 date:   2014-05-25 18:41:55
 categories: tech
 ---
--->
 
 # If I were to build a system from scratch (kinda). 
 
