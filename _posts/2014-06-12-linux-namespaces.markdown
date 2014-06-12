@@ -62,19 +62,21 @@ Taking a look at the image again and revisit it's expected behavior:
 
 <img src="/images/namespaces.jpg" alt="Drawing" style="width: 700px;height: 400px;"/>
 
-## The host should be able to ping ns1, but not n2.  In the host machine do the following:
+## Testing our setup.
+
+### The host should be able to ping ns1, but not n2.  In the host machine do the following:
 
     $ ping 10.1.1.2  // configured for v11. this should succeed.     
     $ ping 20.1.1.2  // configured for v22 on ns2. this should fail. 
     $ ping 20.1.1.1  // configured for v2 on ns2.  this should fail. the v2/v22 pair connects ns1 with n2.
     
     
-## Ns1 should be able to ping the host and ns2. 
+### Ns1 should be able to ping the host and ns2. 
     
     $ ip netns exec ns1 ping 10.1.1.1 // configured for the host.  this succeeds.
     $ ip netns exec ns1 ping 20.1.1.2 // configured for ns2.  This fails. 
         
-## Ns2 should be able to ping ns1, but not the host. 
+### Ns2 should be able to ping ns1, but not the host. 
         
     $ ip netns exec ns1 ping 20.1.1.1 // configured for ns1. this succeeds. 
     $ ip netns exec ns1 ping 10.1.1.1 // configured for the host. this fails. 
