@@ -1,7 +1,7 @@
 ---
 layout: post                                                                                                                  
 title:  "An exercise in Linux Namespaces"
-date:   2014-06-09 18:41:55
+date:   2014-06-12 18:41:55
 categories: linux
 ---
 
@@ -23,7 +23,7 @@ The following setup has these properties:
 3. Ns2 should be able to ping ns1, but not the host.
 
 
-Create the namespaces.
+Create the namespaces
 
     ip netns add ns1
     ip netns add ns2
@@ -38,29 +38,27 @@ Create the virtual ethernet pairs
     ip link add v1 type veth peer name v11
     ip link add v2 type veth peer name v22
  
-# verify that the veth pairs were created
+Verify that the veth pairs were created
     
     ip link list
  
-# move the virtual ethernet pairs around to match the image above.
+Move the virtual ethernet pairs around to match the image above.
 
     ip link set v11 netns ns1
     ip link set v2 netns ns1
     ip link set v22 netns ns2
  
-# verify that we set the links correctly
+Verify that we set the links correctly
 
     ip netns exec ns1 ip link list  # you should see v11 and v2
     ip netns exec ns2 ip link list  # you should see v22
  
-# configure interfaces
-# the v1 and v12 pair
+Configure interfaces
 
     ifconfig v1 10.1.1.1/24 up
     ip netns exec ns1 ifconfig v11 10.1.1.2/24 up
     ip netns exec ns2 ifconfig v11 20.1.1.1/24 up
     ip netns exec ns2 ifconfig v11 20.1.1.2/24 up
-
 
 
 Taking a look at the image again: 
