@@ -5,11 +5,11 @@ date:   2014-06-12 18:41:55
 categories: linux
 ---
 
-This following post is an exercise in Linux namespaces.  What we will try to accomplish is what you see below. 
-This is an exercise derived from the following [tutorial](http://blog.scottlowe.org/2013/09/04/introducing-linux-network-namespaces/). You will need to execute the bash script as well as the examples in this post as `root`.
+This following post is an exercise in Linux namespaces.  The images below shows what we will build. This is an exercise derived from the following [tutorial](http://blog.scottlowe.org/2013/09/04/introducing-linux-network-namespaces/). 
 
-You can see the [Gist](https://gist.github.com/rexposadas/6ac98e2f421e609ec842).
-The Gist is a bash script which you can execute to get the setup setup below.
+Allthe commands in this post should be executed as `root`.
+
+I wrote a [bash script](https://gist.github.com/rexposadas/6ac98e2f421e609ec842) that you can run to get the desired setup.  
 
 <img src="/images/namespaces.jpg" alt="Drawing" style="width: 700px;height: 400px;"/>
 
