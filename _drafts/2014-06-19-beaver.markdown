@@ -1,0 +1,52 @@
+Leave it (the logging) to Beaver
+================================
+
+This post shows you how to get started with [beaver](https://github.com/josegonzalez/beaver). 
+
+
+Follow the installation instructions in the Github page. 
+
+# The Setup 
+
+Run the following in order to determine if you have beaver up. 
+
+	beaver -h
+
+That should give you the manual. 
+
+What we are going to do is simple.  Have beaver listen to a file and then output to stdout. It's a simple simulation of beaver listening to a log file and processing it's updates. 
+
+Create a file that will serve as your log file. This is what beaver will listen to.
+
+	touch in.log
+
+Create a config file to tell beaver what version of logentries we would like. 
+
+	vim beaver.conf
+
+In the conf file enter:
+
+	[beaver]
+	logstash_version: 1
+
+In one terminal start beaver, setting the config file and the file we would like to listen to. The command below should start a
+	
+	beaver -c beaver.conf -f in.log
+
+In another terminal add content to in.log
+	
+	echo "hello" >> in.log
+
+You should see something like this in the terminal you ran beaver in. 
+
+	{
+    "tags": [],
+    "@version": 1,
+    "@timestamp": "2014-06-19T15:22:38.907Z",
+    "host": "provisioner",
+    "file": "/home/rex/workspace/in.log",
+    "message": "hello",
+    "type": "file"
+	}
+
+Done!  Beaver is not working for you. 
