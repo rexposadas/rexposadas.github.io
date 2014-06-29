@@ -45,8 +45,7 @@ The repository has [usage information](https://registry.hub.docker.com/u/rexposa
 	-e LOOKUPD_ADDRESS=<host>:<port> \
 	rexposadas/nsqd
 
-Set `LOOKUPD_ADDRESS` to the docker IP and the TCP port of nsqlookupd. i.e. `dockerIP:4160` (4160 being the port nsqlookupd is listening on for TCP). 
-
+Set `LOOKUPD_ADDRESS` to the docker IP and the TCP port of nsqlookupd. i.e. `dockerIP:4160`.
 
 Let's say that my docker IP is `172.17.42.1` 
 
