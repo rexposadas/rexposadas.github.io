@@ -5,7 +5,7 @@ date:   2014-06-28
 categories: docker nsq
 ---
 
-This document details how to connect nsqd and nsqlookupd.  Nsqd and nsqlookupd will be running on separate
+This post details how to connect nsqd and nsqlookupd.  Nsqd and nsqlookupd will be running on separate
 Docker containers.
 
 # Links
