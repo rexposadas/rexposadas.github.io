@@ -1,0 +1,12 @@
+nsq + docker
+============
+
+
+This document details how to configure a docker+nsq environment.  Nsqd and nsqlookup will be in separate containers. 
+
+# Links
+
+* [nsq](http://nsq.io/)
+* nsqd [container](https://registry.hub.docker.com/u/rexposadas/nsqd/).  There is an [official container](https://registry.hub.docker.com/u/mreiferson/nsqd/) but that does not allow us to connect to an nsqlookupd instance running inside a docker container.
+* nsqlookupd [official container](https://registry.hub.docker.com/u/mreiferson/nsqlookupd/)
+

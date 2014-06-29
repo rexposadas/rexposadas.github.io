@@ -49,4 +49,55 @@ You should see something like this in the terminal you ran beaver in.
     "type": "file"
 	}
 
-Done!  Beaver is not working for you. 
+Done!  Beaver is now working for you. 
+
+# Issues
+
+Beaver depends on the python request module.  [Here is the issue and the solution](http://stackoverflow.com/questions/24314333/error-encountered-configuring-beaver-to-use-http-as-the-transport). 
+
+# NSQ
+
+NSQ will serve as our broker.  The broker serves a queue. It holds the messages in case (1) log consumers (in our case ELK) goes down (2) log consumers cannot process the logs fast enough.  Ideally, nsq will be empty most of the time. 
+
+## Installation
+
+nsq is easy enough to [install](http://nsq.io/overview/quick_start.html).
+
+The only different in our setup is that instead of nsq outputing to a file, we will output to http.  The http will point to elastic search.  
+
+# Connecting Beaver to NSQ
+
+Beaver has can transport logs via http. Create a beaver config file (beaver.conf). 
+
+
+	[beaver]                                                                     
+	logstash_version: 1
+	transport: http
+	http_url: http://127.0.0.1:4151/put?topic=test
+	 
+	[in.log]
+
+
+This config file instructs beaver to POST it's output to http at the specified URL.  Change the host and port accordinly to point to your nsq instance. 
+
+Restart beaver passing the config file. 
+
+	beaver -c beaver.conf
+
+Now add to the log you are listening in. 
+
+	echo "nsq attached" >> in.log
+
+Take a look at your nsq admin page. Just as in the nsq installation page, the default URL is http://127.0.0.1:4171/.  You will see that the number of messages increased by 1.  This means that a log entry made it to nsq.  So the path of the log was:
+
+	in.log -> beaver -> nsq
+
+You now have beaver and nsq connected!
+
+# The ELK stack
+
+The ELK stack will store and process our logs. 
+
+## ElasticSearch
+
+Elastic search accepts HTTP requests as data input.
