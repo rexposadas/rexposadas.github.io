@@ -1,8 +1,12 @@
-nsq + docker
-============
+---
+layout: post                                                                                                                  
+title:  "Connecting dockerized nsqd and nsqlookupd"
+date:   2014-06-28
+categories: docker nsq
+---
 
-
-This document details how to connect nsqd and nsqlookupd running in separate Docker containers.
+This document details how to connect nsqd and nsqlookupd.  Nsqd and nsqlookupd will be running on separate
+Docker containers.
 
 # Links
 
@@ -66,7 +70,7 @@ On another terminal watch nsqd with the use of [nsq_stat](http://nsq.io/componen
 
 Create a topic.
 	
-	curl -d 'hello world 1' 'http://172.17.42.1:4151/put?topic=test'
+    curl -d 'hello world 1' 'http://172.17.42.1:4151/put?topic=test'
  
 
 You should now see the "test" topic in nsqlookupd. The terminal which you watch nsqlookupd should displaying something like this: 

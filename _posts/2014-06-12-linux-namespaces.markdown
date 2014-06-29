@@ -14,10 +14,10 @@ I wrote a [bash script](https://gist.github.com/rexposadas/6ac98e2f421e609ec842)
 <img src="/images/namespaces.jpg" alt="Drawing" style="width: 700px;height: 400px;"/>
 
 
-Create the namespaces.
+Create the namespaces
 
-    $ ip netns add ns1
-    $ ip netns add ns2
+    ip netns add ns1
+    ip netns add ns2
  
 check that the namespaces has been created.  After running the command you should 
 see ns1 and ns2 in the list.
