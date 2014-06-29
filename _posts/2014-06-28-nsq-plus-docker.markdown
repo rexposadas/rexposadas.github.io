@@ -60,7 +60,7 @@ Note that I am using port 4160. That is the port exposed when we started the nsq
 
 ## Testing our setup. 
 
-On one terminal watch  nsqdlookupd. The command below lists all the topics nsqlookupd knows.
+On one terminal watch nsqdlookupd. The command below lists all the topics nsqlookupd knows.
 
 	watch -n 0.5 "curl -s curl http://172.17.42.1:4161/topics"
 
