@@ -55,12 +55,12 @@ Let's say that my docker IP is `172.17.42.1`
 	-e LOOKUPD_ADDRESS=172.17.42.1:4160 \ 
 	rexposadas/nsqd
 
-Note that I am using port 4160. That is the port exposed when we started the nsqlookupd container.  It is the default port for nsqlookupd. Take a look a the nsq [quick start](http://nsq.io/overview/quick_start.html). This can be changed obviously, but for now, let's keep it simple.
+Note that I am using port 4160. That is the port exposed when we started the nsqlookupd container.  It is the default port for nsqlookupd. Take a look a the nsq [quick start](http://nsq.io/overview/quick_start.html). This can be changed obviously, but for now, keep it simple.
 
 
 ## Testing our setup. 
 
-One one terminal watch  nsqdlookupd. The command below lists all the topics nsqlookupd knows.
+On one terminal watch  nsqdlookupd. The command below lists all the topics nsqlookupd knows.
 
 	watch -n 0.5 "curl -s curl http://172.17.42.1:4161/topics"
 
