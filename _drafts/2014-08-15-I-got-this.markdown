@@ -1,0 +1,40 @@
+---
+layout: post
+title:  "I got this. No I don't"
+date:   2014-08-15
+categories: go docker 
+---
+
+Failure
+=======
+
+Yup. I admit it. I failed. I was given an assignment, although the timeline was unrealistic, I still felt that I could finish it given enough energy, focus and long night. But I failed. I didn't meet the deadline.  Is it OK for a programmer, much less a consultant, to admit he failed. Maybe. 
+
+## Lessons learned. 
+
+I attribute my failure to my lack of communication and the bravado I displayed thinking that "I got this!".
+
+
+
+### I got this! 
+
+No I didn't. I had to learn Linux namespaces, [Docker](https://www.docker.com/), [NSQ](http://nsq.io/), [ElasticSearch](http://www.elasticsearch.org/), [Kibana](http://www.elasticsearch.org/overview/kibana/), [LogStash](http://www.elasticsearch.org/overview/kibana/), a custom Go app, and secure tunneling with [Zebedee](http://www.winton.org.uk/zebedee/) all in 6 weeks.
+
+What was I thinking? I *did* notify my managers that it was a hefty task for 6 weeks, but we really had no choice.  It was a fixed-bid project. 
+
+What I did was what I thought was best at the time. I will put in as many hours and I can in a week, kill myself and get this done.  Heads down and ready to go... until I crashed and burned.  By the fourth week I was a walking zombie.  I had no taste for the work.  My motivation was gone and I was no where complete. Lesson learned? Maybe the first is, don't kill yourself. 
+
+### Ask, ask, ask. 
+
+There was so much space to cover I was stupid for me to *not* bug anyone about the code. The code was given handed to me to take over.  I was excited about the idea because, even now, I think it's a really cool project. I *wanted* to own it and finish it. 
+
+But the folks who wrote the Go app did not have the time to help me.  What ended up happening was that I was swimming in really bad written Go code.  It violated the DRY principle in so many ways. But that's no excuse. I came in as a Go dev and it was my duty to fix all that. Right? Right!  So, no blame on the previous developers. 
+
+I blame myself. Even *if* they were busy. I jeopardized the project by not asking.  I spun my wheels a few times and that ate up too much time and brain cells. I *should've* raised the flag early and often.  I was brave and stupid. I'd rather be a coward and lucky to be honest.  
+
+
+### _Something_ good had to come out of all this, right? 
+
+Of course. I was found another tool I love, [Docker](https://www.docker.com/). I don't think I could live without anymore.  I was also able to contribute to the NSQ project with this [documentation](http://nsq.io/deployment/docker.html). 
+
+

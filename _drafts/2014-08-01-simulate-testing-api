@@ -1,0 +1,12 @@
+
+
+Introducting `simulate`. Simulate is a testing framework.  What unique about Simulate? 
+
+* It's has a "plugin" module.  I.e. Simulate is designed to work on your api by simply creating a plugin for it. I call these plugins `endpoints`. You create an endpoint, add it to the endpoint directory and configure how you want simulate to run your endpoint. 
+
+Simulate was designed to detect the following:
+
+1. Performance degradation. 
+2. Data integrity after your API has been acted on for long periods of time. "long periods of time" meaning days and weeks as supposed to hours with unit and integration testing. 
+
+How does simulate do this? Simple, by making constant calls to your API over a long period of time and reporting it's findings. 

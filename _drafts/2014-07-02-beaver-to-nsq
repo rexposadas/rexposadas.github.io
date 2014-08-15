@@ -1,0 +1,48 @@
+Beaver to NSQ
+=============
+
+Configuring Beaver as a producer for nsq. 
+
+For the examples below, `172.17.42.1` was used as the docker host IP.  Change the example to the docker host ip in your environment. 
+
+### Links
+
+* [Video](http://www.elasticsearch.org/webinars/elk-stack-devops-environment/?watch=1) on setup.
+* [Quick Elk](https://github.com/kurtado/quick-elk). A quick way to get an ELK stack running in your environment. 
+
+
+### Beaver configuration
+
+Set the output of Beaver to be an HTTP POST to nsqd.
+
+	  [beaver]                                                                                                                                                      
+	  logstash_version: 1
+	  transport: http
+	  http_url: http://172.17.42.1:4151/put?topic=test
+	   
+	  [in.log]
+
+
+Setting up nsqd to listent to that port is documented on a different readme in this directory. 
+
+### Checking out setup.
+
+Write to our log file
+
+	echo "my log message" >> in.log
+
+Beaver will read this list from the file and then POST that message to nsqd.  The message is sent as the body of the POST. 
+
+
+### Checking our config
+
+On one terminal check nsqlookupd for the topic "test".
+
+	watch -n 0.5 "curl -s curl http://172.17.42.1:4161/topics"
+
+On another terminal check nsqd for increments in messages with the topic "test"
+
+	watch -n 0.5 "curl -s http://172.17.42.1:4151/stats"
+
+
+
