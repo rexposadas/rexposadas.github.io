@@ -118,5 +118,3 @@ Start sending messages to nsq:
 
 Wait a minute.  It takes time for the message to go from the logstash, to elasticsearch to kibana. Refresh the Kibana UI and you should see this message in the UI.  
 To make life exciting, get a log consumer like [beaver](https://github.com/josegonzalez/beaver) send messages to NSQ.
-
-Questions and comments?  `rexposadas@yahoo.com` or `@rexposadas`
