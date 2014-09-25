@@ -16,9 +16,7 @@ The **goal** is to print a binary tree in such a way that each level of the tree
 
 ### Let's write some code
 
-Let's start with a tree implementation. 
-
-Our tree definition simply looks like this: 
+Our tree definition: 
 
     type Node struct {
         Value int
@@ -28,7 +26,7 @@ Our tree definition simply looks like this:
 
 A tree is made up of one or more nodes, hence the `Node` struct.
 
-Let's make the print function.  The print function will print the tree taking into account the different levels of the tree. 
+The print function will print the tree taking into account the different levels of the tree. 
 
 	// Print prints the entire tree from this node.	
 	func (n *Node) Print() {
@@ -67,8 +65,7 @@ Let's make the print function.  The print function will print the tree taking in
 	}
 
 
-What gives us the ability to determine when the next level of the tree has been reached? It's the two channels `currentLevel` and `nextLevel`.  The `currentLevel` channel represents what to print now. The `nextLevel` channel represents node(s) which should be printed **after** we have inserted a new line. 
-
+What gives us the ability to determine when the next level of the tree has been reached? It's the two channels `currentLevel` and `nextLevel`.  The `currentLevel` channel represents what to print **now**. The `nextLevel` channel represents node(s) which should be printed **after** we have insert a new line. 
 
 ### Sample Tree
 
@@ -77,7 +74,7 @@ What gives us the ability to determine when the next level of the tree has been 
 
 ### Let's print stuff
 
-Let's create a main function which builds the tree above and prints it. 
+Build the tree structure in the example then print it. 
 
 	func main() {
 	
