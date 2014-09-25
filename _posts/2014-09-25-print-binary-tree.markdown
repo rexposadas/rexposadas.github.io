@@ -1,7 +1,7 @@
 ---
 layout: post                                                                                                                  
 title:  "Printing a binary tree in Go"
-date:   2014-05-22 18:41:55
+date:   2014-09-25
 categories: go
 ---
 
