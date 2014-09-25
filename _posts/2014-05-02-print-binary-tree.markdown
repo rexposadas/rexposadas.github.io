@@ -5,15 +5,13 @@ date:   2014-05-22 18:41:55
 categories: go
 ---
 
-# Printing a binary tree in Go.  
-
 The **goal** is to print a binary tree in such a way that each level of the tree is printed in a new line. Also, each level of the tree should be printed from left to right.
 
 This example is pretty cool since it'll demostrate how we can use Go channels to indicate the different levels of the tree.
 
 ### Reference
 
-* Here is the [`entire code`]()
+* Here is the [`entire code`](https://github.com/rexposadas/notes/blob/master/blog/trees/main.go)
 
 
 ### Let's write some code
