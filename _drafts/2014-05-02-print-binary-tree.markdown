@@ -74,7 +74,7 @@ What gives us the ability to determine when the next level of the tree has been 
 
 ### Sample Tree
 
-
+<img src="/images/tree.png" alt="Drawing"/>
 
 
 ### Let's print stuff
@@ -96,15 +96,34 @@ Let's create a main function which builds the tree above and prints it.
 	
 		// level 3
 		n4 := &Node{Value: 4}
-		n2.Left = n4
-	
 		n5 := &Node{Value: 5}
-		n3.Right = n5
+		n2.Left = n4
+		n2.Right = n5
+	
+		n6 := &Node{Value: 6}
+		n3.Right = n6
 	
 		fmt.Println("Printing root node:")
 		root.Print()
+	
+		fmt.Println("Printing node n2:")
+		n2.Print()
 	
 		fmt.Println("Printing node n3:")
 		n3.Print()
 	}
 
+The output looks like this:
+
+	Printing root node:
+	1
+	23
+	456
+	Printing node n2:
+	2
+	45
+	Printing node n3:
+	3
+	6
+
+Note that each level of the tree is represented on it's separate row.  Each level is printed from left to right according to the sample tree. 
