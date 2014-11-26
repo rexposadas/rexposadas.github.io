@@ -1,7 +1,7 @@
 ---
 layout: post                                                                                                                  
 title:  "No motivation to code"
-date:   2014-06-09 18:41:55
+date:   2014-11-26
 categories: go
 ---
 
