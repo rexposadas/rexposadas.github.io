@@ -1,15 +1,15 @@
 nsq + docker + LogStash + ElasticSearch
 =======================================
 
-This page documents how one can use nsq as a broker for LogStash.  At the time of this writing, LogStash does not have a built-in support for nsq.  The plan is to have LogStash listen to a TCP port and have an nsq consumer write to that port. 
+This page documents how one can use nsq as a broker for LogStash.  At the time of this writing, LogStash did not have a built-in support for nsq.  The plan is to have LogStash listen to a TCP port and have an nsq consumer write to that port.
 
-This assumes that you have nsqd and nsqlookupd up and running.  
+This assumes that you have nsqd and nsqlookupd up and running.
 
 We will also connect LogStash to a container running [ElasticSearch](http://www.elasticsearch.org/).
 
 ### How do we scale?
 
-We scale by having a docker container house the nsq consumer.  We can run multiple docker containers for n number of topics and x number of nsqlookupd containers.  
+We scale by having a docker container house the nsq consumer.  We can run multiple docker containers for n number of topics and x number of nsqlookupd containers.
 
 
 Links
@@ -22,26 +22,26 @@ Links
 ### Start LogStash
 
 	docker pull rexposadas/docker-logstash
-	docker run \                                                                 
+	docker run \
 		--name logstash \
-  		-p 514:514 \ 
+  		-p 514:514 \
  		-p 9292:9292 \
 		-p 7000:7000 \
 		-e LOGSTASH_CONFIG_URL=https://gist.githubusercontent.com/rexposadas/d5e286642695d7cb9691/raw/ebe413fb696c8bbbc6fa7dc1a2ac492b90e0a76b/gistfile1.txt
 		rexposadas/docker-logstash
 
 
-We exposes port 7000 to accept messages from the nsq consumer. 
+We exposes port 7000 to accept messages from the nsq consumer.
 
 ### Start the consumer
 
 	docker pull rexposadas/docker-nsq-to-tcp
-	docker run --name consumer \ 
-		-topic=my.topic \ 
-		-e LOOKUPD_ADDRS=<host>:<port> \ 
+	docker run --name consumer \
+		-topic=my.topic \
+		-e LOOKUPD_ADDRS=<host>:<port> \
 		-e OUTPUT_TCP_ADDR=<host>:<port> \
 		rexposadas/docker-logstash
-	
+
 
 
 You can have as many consumers as you like.
@@ -50,12 +50,12 @@ Given:
 
 	My topic is "test"
 	My docker host ip is 172.17.42.1
-	
-A run command can look like this: 
 
-	docker run --name consumer \ 
-		-topic=test \ 
-		-e LOOKUPD_ADDRS=172.17.42.1:4161 \ 
+A run command can look like this:
+
+	docker run --name consumer \
+		-topic=test \
+		-e LOOKUPD_ADDRS=172.17.42.1:4161 \
 		-e OUTPUT_TCP_ADDR=172.17.42.1:7000
 		rexposadas/docker-logstash
 
@@ -64,7 +64,7 @@ Test the setup by publishing to a topic.
 
 	curl -d 'log message' http://172.17.42.1:4151/put?topic=test
 
-LogStash should output something like this: 
+LogStash should output something like this:
 
 	{
        "message" => "log message",
@@ -84,7 +84,7 @@ If you want to see if there is any data in your elasticsearch.
 	or
 	curl 'http://172.17.42.1:9200/_search?pretty' | grep total
 
-The second total is the total number of messages. 
+The second total is the total number of messages.
 
 
 PUT content.
