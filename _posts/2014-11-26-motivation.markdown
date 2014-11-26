@@ -1,6 +1,6 @@
 ---
 layout: post                                                                                                                  
-title:  "No motivation to code"
+title:  "Motivation"
 date:   2014-11-26
 categories: go
 ---
