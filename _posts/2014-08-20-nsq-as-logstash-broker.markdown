@@ -5,6 +5,8 @@ date:   2014-08-20
 categories: docker nsq logstash elasticserch kibana
 ---
 
+*Update* NSQ has official [`images`](https://registry.hub.docker.com/repos/nsqio/). This blog was created prior to the the release of the official images.
+
 This post shows one way to use NSQ as a broker for LogStash.  At the time of this writing LogStash did not come with NSQ support, but it did support TCP input. The plan is to send nsq messages to LogStash via TCP. 
 
 The basics steps to happiness are:
