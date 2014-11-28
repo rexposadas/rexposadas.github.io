@@ -65,7 +65,7 @@ The print function will print the tree taking into account the different levels 
 	}
 
 
-What gives us the ability to determine when the next level of the tree has been reached? It's the two channels `currentLevel` and `nextLevel`.  The `currentLevel` channel represents what to print **now**. The `nextLevel` channel represents node(s) which should be printed **after** we have insert a new line. 
+What gives us the ability to determine when the next level of the tree has been reached? It's the two channels `currentLevel` and `nextLevel`.  The `currentLevel` channel represents what to print **now**. The `nextLevel` channel represents node(s) which should be printed **after** we have inserted a new line. 
 
 ### Sample Tree
 
