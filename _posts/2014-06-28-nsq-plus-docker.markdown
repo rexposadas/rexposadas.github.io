@@ -5,7 +5,7 @@ date:   2014-06-28
 categories: docker nsq
 ---
 
-*Update:* NSQ has official [`images`](https://registry.hub.docker.com/repos/nsqio/). This blog was created prior to the the release of the official images.
+*Update:* NSQ has official [`images`](https://registry.hub.docker.com/repos/nsqio/). This blog was created prior to the release of the official images.
 
 This post details how to connect nsqd and nsqlookupd.  Nsqd and nsqlookupd will be running on separate
 Docker containers.
