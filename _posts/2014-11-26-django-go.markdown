@@ -1,0 +1,46 @@
+---
+layout: post
+title:  "2 years of Go. 3 months of Django."
+date:   2014-11-26
+categories: go django  
+---
+
+### Things to know before reading the rest of the post. 
+
+I use the word `ecosystem` to mean a language, its community, its tools and current projects written in that langauge. So if I write `the Go ecosystem`, I mean the language, projects like [`nsq`](http://nsq.io/) and [`etcd`](https://github.com/coreos/etcd) and the community.
+
+I tend choose to use languages based mostly on feeling and not logic.  Yes, I use some logic.. sometimes, but an ecosystem needs to resonate with me before adding it to my toolset.
+
+I am a backend developer. I have no interest in learning front-end web development.
+
+### TLDR
+
+I added python/django to my toolset. Go is still my favorite ecosystem.
+
+Go excites me.  Django saves me time (at least intially and for certain projects).
+
+Go + Python/Django is a solid combination in the backend.
+
+### Django after 3 months
+
+I love the ORM.  I can prototype an idea without worrying about sweeping changes to the DB schema. I simply modify the models, maybe some views, hit the migrate script and I'm set.  For those familiar with ORMs, that's old news.  It's refreshing change for me since my experience with ORMs has been very limited.  
+
+The Django Rest Framework is pretty sweet. It's robust and has great documentation. In fact, Django and its more popular plugins are well documented.  I love it. 
+
+In short, playing with Django feels just like that... it feels like I'm playing. That's a great feeling for someone who want to prototype a lot. 
+
+### Why Go became my main language.
+
+A brief background: I've been programming with java since 2000 and from 2008 to 2012 I programs in PHP.  In 2012 I began programming in Go. A few weeks into it, I love the language.  Being able to quickly create highly concurrent applications felt great. With Go, I am very interested in what the language designers approached the languge.  I am very intersted in the features they descided to include and exclude.  Both are important because it lets you answer a lot of "why" questions regarding the langauge. I have never been this interested about a langauge before. Yes, after over a decade of programming professionally, I actually care about the design and evolution of a language. That's a great thing for me. It's exciting. 
+
+I've always considered the abilty to program as a priviledge. The experience is even sweeter when I can build software used by thousands, if not, millions of people. That's the feeling I've been rewarded with in the past 2 years working with Go
+
+
+### Where does Django and Go fit in my professional life?
+
+I like to keep things simple. To be honest, I wish I could only work on one language. But sometimes that's not practical.  I work for a company which uses Django for it's REST API and Go for a custom test suite. Would I have rather use Go for the entire backend? Maybe.  I had 3 months to create a REST API and associated DB schema and I had to build it from scratch with shifting requirements. The project was large enough that I knew if I used Go from the beginning, I might not make the deadline. Django, it's ORM and the Django REST framework make the 3 months a reacheable goal. 
+
+Yes, I know, Go has "ORMs", but you can't compare that to what Django has.  The speed and maturity of the Django ORM makes it a champ. 
+
+Now that the API has been built, do I wish that I used Go?  Yes!  I'm starting to get into maintenance mode and add tooling around the API.  Optimizations, refactoring and building tools would have been easier, and *a lot* more fun if everything was in Go. The word *fun* is key, because that gives you energy to keep going and helps you love your work. 
+
