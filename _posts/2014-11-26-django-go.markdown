@@ -38,7 +38,7 @@ I've always considered the abilty to program as a priviledge. The experience is 
 
 ### Where does Django and Go fit in my professional life?
 
-I like to keep things simple. To be honest, I wish I could only work on one language. But sometimes that's not practical.  I work for a company which uses Django for it's REST API and Go for a custom test suite. Would I have rather use Go for the entire backend? Maybe.  I had 3 months to create a REST API and associated DB schema and I had to build it from scratch with shifting requirements. The project was large enough that I knew if I used Go from the beginning, I might not make the deadline. Django, it's ORM and the Django REST framework make the 3 months a reacheable goal. 
+I like to keep things simple. To be honest, I wish I could only work on one language. But that's not always practical.  I work for a company which uses Django for it's REST API and Go for a custom test suite. Would I have rather use Go for the entire backend? Maybe.  I had 3 months to create a REST API and associated DB schema and I had to build it from scratch with shifting requirements. The project was large enough that I knew if I used Go from the beginning, I might not make the deadline. Django, it's ORM and the Django REST framework make the 3 months a reacheable goal. 
 
 Yes, I know, Go has "ORMs", but you can't compare that to what Django has.  The speed and maturity of the Django ORM makes it a champ. 
 
