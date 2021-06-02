@@ -5,6 +5,8 @@ date:   2013-06-25 18:41:55
 categories: go api revel
 ---
 
+# Experience with Revel
+
 This post gives a high level view of my experience writing an API using Go and the Revel Framework. The API was used to interact with the Marvel Heroes MMO game and Steam, the game portal. A more detailed explanation of how the application was built is yet to come.
 
 The goal was to build an API which third-party applications can call to integrate with our system. A relatively high throughput was needed since we planned for multiple applications to use this API, and we are not a company that has a lot of hardware to throw around. It needed to efficient since it would be sharing the same servers with other applications. Steam was the first application, and we had four weeks to build and deploy it to production.
