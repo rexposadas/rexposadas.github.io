@@ -4,7 +4,7 @@ email: rexposadas@gmail.com
 description: "Go + Video Games = Life"
 baseurl: ""
 username: "rexposadas"
-url: "http://rexposadas.com"
+# url: "http://rexposadas.com"
 
 # Build settings
 markdown: kramdown
