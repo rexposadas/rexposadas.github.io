@@ -10,4 +10,4 @@ url: "http://rexposadas.com"
 markdown: kramdown
 permalink: pretty
 
-theme: jekyll-theme-midnight
+theme: jekyll-theme-architect
