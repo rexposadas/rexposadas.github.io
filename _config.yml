@@ -10,4 +10,4 @@ username: "rexposadas"
 markdown: kramdown
 permalink: pretty
 
-theme: jekyll-theme-architect
+theme: jekyll-theme-hacker
