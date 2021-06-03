@@ -1,8 +1,4 @@
-remote_theme: mmistakes/minimal-mistakes
+theme: jekyll-theme-hacker
 
-# Site settings
 title: Rex Posadas
-email: rexposadas@gmail.com
-description: "Technical Arcticles and Book Reviews"
-baseurl: ""
-username: "rexposadas"
+description: Technical Articles and Book Reviews
