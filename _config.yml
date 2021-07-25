@@ -58,7 +58,7 @@ plugins:
 
 author:
   name   : "Rex Posadas"
-  avatar : "/assets/images/bio-photo.jpg"
+  avatar : "/assets/images/profile.jpg"
   bio    : "Lead Software Engineer"
   links:
     - label: "Twitter"
