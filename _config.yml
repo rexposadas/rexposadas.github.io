@@ -6,3 +6,5 @@ email: rexposadas@gmail.com
 description: "Technical Arcticles and Book Reviews"
 baseurl: ""
 username: "rexposadas"
+
+theme: jekyll-theme-cayman
