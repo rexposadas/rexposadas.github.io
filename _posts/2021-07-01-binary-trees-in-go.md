@@ -5,6 +5,7 @@ categories:
   - blog
 tags:
   - golang
+  - coding
 ---
 
 The **goal** is to print a binary tree in such a way that each level of the tree is printed in a new line. Also, each level of the tree should be printed from left to right.
