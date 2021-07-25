@@ -20,54 +20,53 @@ The **goal** is to print a binary tree in such a way that each level of the tree
 
 Our tree definition: 
 
-```golang
-    type Node struct {
-        Value int
-        Left  *Node
-        Right *Node
-    }
+```go
+type Node struct {
+    Value int
+    Left  *Node
+    Right *Node
+}
 ```
 
 A tree is made up of one or more nodes, hence the `Node` struct.
 
 The print function will print the tree taking into account the different levels of the tree. 
 
-	// Print prints the entire tree from this node.	
-```golang
-	func (n *Node) Print() {
+```go
+// Print prints the entire tree from this node.	
+func (n *Node) Print() {
+	if n == nil {
+		return
+	}
 
-		if n == nil {
-			return
+	// nodes in this channel are printed rightaway
+	currentLevel := make(chan *Node, 1000)
+
+	// notes in this channel will be printed after
+	// a new line is generated.
+	nextLevel := make(chan *Node, 1000)
+
+	// Let's ready the current node for printing
+	currentLevel <- n // root of the tree
+
+	for len(currentLevel) > 0 {
+
+		n := <-currentLevel
+		fmt.Print(n.Value)
+
+		if n.Left != nil {
+			nextLevel <- n.Left
 		}
-	
-		// nodes in this channel are printed rightaway
-		currentLevel := make(chan *Node, 1000)
-	
-		// notes in this channel will be printed after
-		// a new line is generated.
-		nextLevel := make(chan *Node, 1000)
-	
-		// Let's ready the current node for printing
-		currentLevel <- n // root of the tree
-	
-		for len(currentLevel) > 0 {
-	
-			n := <-currentLevel
-			fmt.Print(n.Value)
-	
-			if n.Left != nil {
-				nextLevel <- n.Left
-			}
-			if n.Right != nil {
-				nextLevel <- n.Right
-			}
-	
-			if len(currentLevel) == 0 {
-				fmt.Println("")
-				swap(currentLevel, nextLevel)
-			}
+		if n.Right != nil {
+			nextLevel <- n.Right
+		}
+
+		if len(currentLevel) == 0 {
+			fmt.Println("")
+			swap(currentLevel, nextLevel)
 		}
 	}
+}
 ```
 
 What gives us the ability to determine when the next level of the tree has been reached? It's the two channels `currentLevel` and `nextLevel`.  The `currentLevel` channel represents what to print **now**. The `nextLevel` channel represents node(s) which should be printed **after** we have inserted a new line. 
