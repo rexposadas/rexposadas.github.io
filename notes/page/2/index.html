@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>404 Page not found</title>
+    <title>Notes</title>
     <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -25,16 +25,21 @@
 
 
 
-<meta property="og:title" content="404 Page not found" />
+<meta property="og:title" content="Notes" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://hugo-toha.github.io/404.html" />
+<meta property="og:url" content="https://hugo-toha.github.io/notes/" />
 
 
 
     
     
-    <link rel="stylesheet" href="/css/404.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+  />
+  <link rel="stylesheet" href="/css/layouts/notes.css">
+  <link rel="stylesheet" href="/css/navigators/sidebar.css">
 
 
     
@@ -87,29 +92,75 @@
 
 
       
-       
-
       
-      
-
-
-
-
-
-
+  
   
 
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/notes" data-filter="all">Notes</a></li>
+            <div class="subtree">
+                
 
-
-<div class="container">
-    <div class="notFound">
-        <img src="/images/404_huf404c6818e5475c7870a4722b4efea20_110323_1500x0_resize_box_3.png" alt="Page Not Found">
-        <div class="message">
-            <h1>404</h1>
-            <h4>The page you are looking for is not there yet.</h4>
+            </div>
+          </ul>
         </div>
+      </div>
     </div>
-</div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content container-fluid" id="content">
+    <div class="container-fluid note-card-holder" id="note-card-holder">
+      
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+    </div>
+    <div class="paginator">
+      
+    <ul class="pagination pagination-default">
+      <li class="page-item">
+        <a href="/notes/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/notes/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/notes/" aria-label="Page 1" class="page-link" role="button">1</a>
+      </li>
+      <li class="page-item active">
+        <a aria-current="page" aria-label="Page 2" class="page-link" role="button">2</a>
+      </li>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Next" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Last" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul>
+    </div>
+  </div>
+</section>
 
 
       
@@ -281,7 +332,15 @@
 
 
     
-     
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+  <script src="/js/imagesloaded.pkgd.min.js"></script>
+  <script src="/js/note.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  
+
 
     
 </body>

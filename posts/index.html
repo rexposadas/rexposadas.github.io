@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>404 Page not found</title>
+    <title>Posts</title>
     <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -25,16 +25,20 @@
 
 
 
-<meta property="og:title" content="404 Page not found" />
+<meta property="og:title" content="Posts" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://hugo-toha.github.io/404.html" />
+<meta property="og:url" content="https://hugo-toha.github.io/posts/" />
 
 
 
     
     
-    <link rel="stylesheet" href="/css/404.css">
+    <link rel="stylesheet" href="/css/layouts/list.css">
+    <link rel="stylesheet" href="/css/navigators/sidebar.css">
+    
+    <link rel="stylesheet" href="/css/style.css"/>
+
 
 
     
@@ -87,29 +91,142 @@
 
 
       
-       
-
       
-      
+  
+  
 
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/generated/generated_code/" title="Generated Art">Generated Art</a></li>
+  
 
-
-
-
-
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/random/" title="Random Post">Random Post</a></li>
   
 
 
-
-<div class="container">
-    <div class="notFound">
-        <img src="/images/404_huf404c6818e5475c7870a4722b4efea20_110323_1500x0_resize_box_3.png" alt="Page Not Found">
-        <div class="message">
-            <h1>404</h1>
-            <h4>The page you are looking for is not there yet.</h4>
+            </div>
+          </ul>
         </div>
+      </div>
     </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content container-fluid" id="content">
+    <div class="container-fluid post-card-holder" id="post-card-holder">
+      
+      
+      
+        
+          <div class="post-card">
+  <a href="/posts/binarytree/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/images/circle.png' alt="Hero Image">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Working with Binary Trees</h5>
+        <p class="card-text post-summary">The goal is to print a binary tree in such a way that each level of the tree is printed in a new line. Also, each level of the tree should be printed from left to right.
+Why is this cool? Because it uses channels to print the different levels of the tree.
+Reference Here is the entire code Let&rsquo;s write some code Our tree definition:
+type Node struct { Value int Left *Node Right *Node } A tree is made up of one or more nodes, hence the Node struct.</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">June 8, 2021</span>
+        <a
+        href="/posts/binarytree/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
 </div>
+
+        
+      
+        
+          <div class="post-card">
+  <a href="/posts/generated/generated_code/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/images/generated/square-1.png' alt="Hero Image">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Generated Art</h5>
+        <p class="card-text post-summary">Starting with generated art (using Golang). What is it? It&rsquo;s digital art created by code.
+What I like about it You can produce a ton of work in a short amount of time. I don&rsquo;t have a degree in art and never really been an artist, but generated art if easy for someone who can code to pick up. It&rsquo;s basic coding with basic math involved.
+Getting started If you&rsquo;re like me, getting up and running is what I need first.</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">June 8, 2022</span>
+        <a
+        href="/posts/generated/generated_code/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+        
+      
+        
+          <div class="post-card">
+  <a href="/posts/random/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/images/circle.png' alt="Hero Image">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Random</h5>
+        <p class="card-text post-summary">JJJ</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">June 8, 2021</span>
+        <a
+        href="/posts/random/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+        
+      
+    </div>
+    <div class="paginator">
+      
+    </div>
+  </div>
+</section>
 
 
       
@@ -281,7 +398,9 @@
 
 
     
-     
+    
+    <script src="/js/list.js"></script>
+
 
     
 </body>
