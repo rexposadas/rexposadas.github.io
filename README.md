@@ -1,9 +1,3 @@
-rexposadas.github.io
-====================
-
-Personal blog for Rex Posadas
-
-
 How this is contructed
 
 1. Use hugo to generate files into the public folder. 
