@@ -1,0 +1,17 @@
+# some information about you
+name: "Rex Posadas"
+nickname: "Rex Posadas"
+# greeting message before your name. it will default to "Hi! I am" if not provided
+greeting: "I'm "
+image: "/images/author/john.png"
+# give your some contact information. they will be used in the footer
+contactInfo:
+  email: "rexposadas@gmail.com"
+  github: rexposadas
+  linkedin: rexposadas
+
+# some summary about what you do
+summary:
+  - Silicon Valley Engineer... I build stuff
+  - Generative Art
+  - Mentoring, Technical Lead
