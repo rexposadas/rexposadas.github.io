@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Working with Binary Trees</title>
+    <title>Intro to Python&#39;s Beaver</title>
     <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -25,10 +25,10 @@
 
 
 
-<meta property="og:title" content="Working with Binary Trees" />
-<meta property="og:description" content="Work with Binary Tree" />
+<meta property="og:title" content="Intro to Python&#39;s Beaver" />
+<meta property="og:description" content="Working with Python&#39;s Beaver" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rexposadas.github.io/posts/binarytree/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://rexposadas.github.io/posts/beaver/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-06-08T06:00:23+06:00" />
 <meta property="article:modified_time" content="2021-06-08T06:00:23+06:00" />
 
@@ -36,7 +36,7 @@
 
     
     
-<meta name="description" content="Work with Binary Tree" />
+<meta name="description" content="Working with Python&#39;s Beaver" />
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
@@ -123,12 +123,9 @@
   
   
   
-    
-    
-  
   
     
-    <li><a class="active" href="/posts/binarytree/" title="BinaryTree">BinaryTree</a></li>
+    <li><a class="" href="/posts/binarytree/" title="BinaryTree">BinaryTree</a></li>
   
 
   
@@ -144,9 +141,12 @@
   
   
   
+    
+    
+  
   
     
-    <li><a class="" href="/posts/beaver/" title="Beaver">Beaver</a></li>
+    <li><a class="active" href="/posts/beaver/" title="Beaver">Beaver</a></li>
   
 
 
@@ -176,112 +176,78 @@
         </div>
 
         <div class="title">
-          <h1>Working with Binary Trees</h1>
+          <h1>Intro to Python&#39;s Beaver</h1>
         </div>
         
         <div class="post-content" id="post-content">
-          <p>The <strong>goal</strong> is to print a binary tree in such a way that each level of the tree is printed in a new line. Also, each level of the tree should be printed from left to right.</p>
-<p><em>Why</em> is this <em>cool</em>? Because it uses channels to print the different levels of the tree.</p>
-<h3 id="reference">Reference</h3>
-<ul>
-<li>Here is the <a href="https://github.com/rexposadas/notes/blob/master/blog/trees/main.go"><code>entire code</code></a></li>
-</ul>
-<h3 id="lets-write-some-code">Let&rsquo;s write some code</h3>
-<p>Our tree definition:</p>
-<pre><code>type Node struct {
-    Value int
-    Left  *Node
-    Right *Node
+          <h1 id="leave-it-the-logging-to-beaver">Leave it (the logging) to Beaver</h1>
+<p>This post shows you how to get started with <a href="https://github.com/josegonzalez/beaver">beaver</a>.</p>
+<p>Follow the installation instructions in the Github page.</p>
+<h1 id="the-setup">The Setup</h1>
+<p>Run the following in order to determine if you have beaver up.</p>
+<pre><code>beaver -h
+</code></pre>
+<p>That should give you the manual.</p>
+<p>What we are going to do is simple.  Have beaver listen to a file and then output to stdout. It&rsquo;s a simple simulation of beaver listening to a log file and processing it&rsquo;s updates.</p>
+<p>Create a file that will serve as your log file. This is what beaver will listen to.</p>
+<pre><code>touch in.log
+</code></pre>
+<p>Create a config file to tell beaver what version of logentries we would like.</p>
+<pre><code>vim beaver.conf
+</code></pre>
+<p>In the conf file enter:</p>
+<pre><code>[beaver]
+logstash_version: 1
+</code></pre>
+<p>In one terminal start beaver, setting the config file and the file we would like to listen to. The command below should start a</p>
+<pre><code>beaver -c beaver.conf -f in.log
+</code></pre>
+<p>In another terminal add content to in.log</p>
+<pre><code>echo &quot;hello&quot; &gt;&gt; in.log
+</code></pre>
+<p>You should see something like this in the terminal you ran beaver in.</p>
+<pre><code>{
+&quot;tags&quot;: [],
+&quot;@version&quot;: 1,
+&quot;@timestamp&quot;: &quot;2014-06-19T15:22:38.907Z&quot;,
+&quot;host&quot;: &quot;provisioner&quot;,
+&quot;file&quot;: &quot;/home/rex/workspace/in.log&quot;,
+&quot;message&quot;: &quot;hello&quot;,
+&quot;type&quot;: &quot;file&quot;
 }
 </code></pre>
-<p>A tree is made up of one or more nodes, hence the <code>Node</code> struct.</p>
-<p>The print function will print the tree taking into account the different levels of the tree.</p>
-<pre><code>// Print prints the entire tree from this node.	
-func (n *Node) Print() {
-
-	if n == nil {
-		return
-	}
-
-	// nodes in this channel are printed rightaway
-	currentLevel := make(chan *Node, 1000)
-
-	// notes in this channel will be printed after
-	// a new line is generated.
-	nextLevel := make(chan *Node, 1000)
-
-	// Let's ready the current node for printing
-	currentLevel &lt;- n // root of the tree
-
-	for len(currentLevel) &gt; 0 {
-
-		n := &lt;-currentLevel
-		fmt.Print(n.Value)
-
-		if n.Left != nil {
-			nextLevel &lt;- n.Left
-		}
-		if n.Right != nil {
-			nextLevel &lt;- n.Right
-		}
-
-		if len(currentLevel) == 0 {
-			fmt.Println(&quot;&quot;)
-			swap(currentLevel, nextLevel)
-		}
-	}
-}
+<p>Done!  Beaver is now working for you.</p>
+<h1 id="issues">Issues</h1>
+<p>Beaver depends on the python request module.  <a href="http://stackoverflow.com/questions/24314333/error-encountered-configuring-beaver-to-use-http-as-the-transport">Here is the issue and the solution</a>.</p>
+<h1 id="nsq">NSQ</h1>
+<p>NSQ will serve as our broker.  The broker serves a queue. It holds the messages in case (1) log consumers (in our case ELK) goes down (2) log consumers cannot process the logs fast enough.  Ideally, nsq will be empty most of the time.</p>
+<h2 id="installation">Installation</h2>
+<p>nsq is easy enough to <a href="http://nsq.io/overview/quick_start.html">install</a>.</p>
+<p>The only different in our setup is that instead of nsq outputing to a file, we will output to http.  The http will point to elastic search.</p>
+<h1 id="connecting-beaver-to-nsq">Connecting Beaver to NSQ</h1>
+<p>Beaver has can transport logs via http. Create a beaver config file (beaver.conf).</p>
+<pre><code>[beaver]                                                                     
+logstash_version: 1
+transport: http
+http_url: http://127.0.0.1:4151/put?topic=test
+ 
+[in.log]
 </code></pre>
-<p>What gives us the ability to determine when the next level of the tree has been reached? It&rsquo;s the two channels <code>currentLevel</code> and <code>nextLevel</code>.  The <code>currentLevel</code> channel represents what to print <strong>now</strong>. The <code>nextLevel</code> channel represents node(s) which should be printed <strong>after</strong> we have inserted a new line.</p>
-<h3 id="sample-tree">Sample Tree</h3>
-<img src="/images/circle.png" alt="Drawing"/>
-<h3 id="lets-print-stuff">Let&rsquo;s print stuff</h3>
-<p>Build the tree structure in the example then print it.</p>
-<pre><code>func main() {
-
-	// top node, considered  the first level
-	root := &amp;Node{
-		Value: 1,
-	}
-
-	// level 2
-	n2 := &amp;Node{Value: 2}
-	n3 := &amp;Node{Value: 3}
-	root.Left = n2
-	root.Right = n3
-
-	// level 3
-	n4 := &amp;Node{Value: 4}
-	n5 := &amp;Node{Value: 5}
-	n2.Left = n4
-	n2.Right = n5
-
-	n6 := &amp;Node{Value: 6}
-	n3.Right = n6
-
-	fmt.Println(&quot;Printing root node:&quot;)
-	root.Print()
-
-	fmt.Println(&quot;Printing node n2:&quot;)
-	n2.Print()
-
-	fmt.Println(&quot;Printing node n3:&quot;)
-	n3.Print()
-}
+<p>This config file instructs beaver to POST it&rsquo;s output to http at the specified URL.  Change the host and port accordinly to point to your nsq instance.</p>
+<p>Restart beaver passing the config file.</p>
+<pre><code>beaver -c beaver.conf
 </code></pre>
-<p>The output looks like this:</p>
-<pre><code>Printing root node:
-1
-23
-456
-Printing node n2:
-2
-45
-Printing node n3:
-3
-6
+<p>Now add to the log you are listening in.</p>
+<pre><code>echo &quot;nsq attached&quot; &gt;&gt; in.log
 </code></pre>
-<p>Note that each level of the tree is represented on it&rsquo;s separate row.  Each level is printed from left to right according to the sample tree.</p>
+<p>Take a look at your nsq admin page. Just as in the nsq installation page, the default URL is http://127.0.0.1:4171/.  You will see that the number of messages increased by 1.  This means that a log entry made it to nsq.  So the path of the log was:</p>
+<pre><code>in.log -&gt; beaver -&gt; nsq
+</code></pre>
+<p>You now have beaver and nsq connected!</p>
+<h1 id="the-elk-stack">The ELK stack</h1>
+<p>The ELK stack will store and process our logs.</p>
+<h2 id="elasticsearch">ElasticSearch</h2>
+<p>Elastic search accepts HTTP requests as data input.</p>
 
         </div>
 
@@ -318,14 +284,14 @@ Printing node n3:
   
 
   
-    
-    
-  
   
 
   
   
 
+  
+    
+    
   
   
 
@@ -333,24 +299,13 @@ Printing node n3:
 <div class="row next-prev-navigator">
   
     <div class="col-md-6 previous-article">
-      <a href="/posts/generated/generated_code/" title="Generated Art" class="btn btn-outline-info">
+      <a href="/posts/i_got_this/" title="I got this! No, I don&#39;t" class="btn btn-outline-info">
         <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
-        <div class="next-prev-text">Generated Art</div>
+        <div class="next-prev-text">I got this! No, I don&#39;t</div>
       </a>
     </div>
   
   
-      
-      
-        
-      
-      <div class="col-md-6 next-article">
-        <a href="/posts/i_got_this/" title="I got this! No, I don&#39;t" class="btn btn-outline-info">
-          <div>Next <i class="fas fa-chevron-circle-right"></i></div>
-          <div class="next-prev-text">I got this! No, I don&#39;t</div>
-        </a>
-      </div>
-    
 </div>
 
       <hr />

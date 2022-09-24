@@ -1,0 +1,37 @@
+---
+title: "Golang for websites"
+date: 2022-06-08T06:00:23+06:00
+hero: '/images/generated/square-1.png'
+description: Art I generated
+draft: true
+menu:
+    sidebar:
+        name: Generated Art
+        identifier: goland-website
+        weight: 30
+    author:
+        Name: Rex Posadas
+        image: /images/author/circle.png
+---
+
+Introducting `simulate`. Simulate is a testing framework.  What is unique about Simulate?
+
+* It's has a "plugin" module.  I.e. Simulate is designed to work on your api by simply creating a plugin for it. I call these plugins `endpoints`. You create an endpoint, add it to the endpoint directory and configure how you want simulate to run your endpoint.
+
+Simulate was designed to measure the following:
+
+1. Performance.
+2. Data integrity after your API has been acted on for long periods of time. "long periods of time" meaning days and weeks as supposed to hours with unit and integration testing.
+
+How does simulate do this? Simple, by making constant calls to your API over a long period of time and reporting it's findings.
+
+I work for a [`company`](http://leaf.ag).
+
+## what simulate keeps track of:
+* how long has the simulation been running
+* response times of api calls
+
+there are several goals to the simulate program.
+our team is very small. and we do not want to invest in hiring full time QA.  plus, how do you test for 100+ devices hitting your api at the same time for various reasons?  how do you run tests on a 24/7 hour basis?  not by hiring, but by "building" your QA team.  since we could not hire a QA team, we decided to build one.
+
+ideally, when the application reaches the customer, the vast majority of the issues found will not be from the API, but from the UI.  that's not necessarily bad.  the issues i'm talking about are user experience issues such as a button being too small, features that we though were valuable but was not on the field, rearranging of the page flows. these are things only our customers can tell us.  and that's OK.  we expect changes likes those to come up. but of the application gives false information, or is super slow or worst, just gives a user a 500. then that's terrible. that should have been caught programmatically.

@@ -2,40 +2,54 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Rex&#39;s Blog</title>
-    <link>https://hugo-toha.github.io/posts/</link>
+    <link>https://rexposadas.github.io/posts/</link>
     <description>Recent content in Posts on Rex&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jun 2022 06:00:23 +0600</lastBuildDate><atom:link href="https://hugo-toha.github.io/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+    <lastBuildDate>Wed, 08 Jun 2022 06:00:23 +0600</lastBuildDate><atom:link href="https://rexposadas.github.io/posts/index.xml" rel="self" type="application/rss+xml" /><item>
       <title>Generated Art</title>
-      <link>https://hugo-toha.github.io/posts/generated/generated_code/</link>
+      <link>https://rexposadas.github.io/posts/generated/generated_code/</link>
       <pubDate>Wed, 08 Jun 2022 06:00:23 +0600</pubDate>
       
-      <guid>https://hugo-toha.github.io/posts/generated/generated_code/</guid>
+      <guid>https://rexposadas.github.io/posts/generated/generated_code/</guid>
       <description>Starting with generated art (using Golang). What is it? It&amp;rsquo;s digital art created by code.
 What I like about it You can produce a ton of work in a short amount of time. I don&amp;rsquo;t have a degree in art and never really been an artist, but generated art if easy for someone who can code to pick up. It&amp;rsquo;s basic coding with basic math involved.
 Getting started If you&amp;rsquo;re like me, getting up and running is what I need first.</description>
     </item>
     
     <item>
-      <title>Working with Binary Trees</title>
-      <link>https://hugo-toha.github.io/posts/binarytree/</link>
+      <title>I got this! No, I don&#39;t</title>
+      <link>https://rexposadas.github.io/posts/i_got_this/</link>
       <pubDate>Tue, 08 Jun 2021 06:00:23 +0600</pubDate>
       
-      <guid>https://hugo-toha.github.io/posts/binarytree/</guid>
+      <guid>https://rexposadas.github.io/posts/i_got_this/</guid>
+      <description>Yup. I admit it. I failed. I was given an assignment, although the timeline was unrealistic, I still felt that I could finish it given enough energy, focus and long night. But I failed. I didn&amp;rsquo;t meet the deadline. Is it OK for a programmer, much less a consultant, to admit he failed. Maybe.
+Lessons learned. I attribute my failure to my lack of communication and the bravado I displayed thinking that &amp;ldquo;I got this!</description>
+    </item>
+    
+    <item>
+      <title>Intro to Python&#39;s Beaver</title>
+      <link>https://rexposadas.github.io/posts/beaver/</link>
+      <pubDate>Tue, 08 Jun 2021 06:00:23 +0600</pubDate>
+      
+      <guid>https://rexposadas.github.io/posts/beaver/</guid>
+      <description>Leave it (the logging) to Beaver This post shows you how to get started with beaver.
+Follow the installation instructions in the Github page.
+The Setup Run the following in order to determine if you have beaver up.
+beaver -h That should give you the manual.
+What we are going to do is simple. Have beaver listen to a file and then output to stdout. It&amp;rsquo;s a simple simulation of beaver listening to a log file and processing it&amp;rsquo;s updates.</description>
+    </item>
+    
+    <item>
+      <title>Working with Binary Trees</title>
+      <link>https://rexposadas.github.io/posts/binarytree/</link>
+      <pubDate>Tue, 08 Jun 2021 06:00:23 +0600</pubDate>
+      
+      <guid>https://rexposadas.github.io/posts/binarytree/</guid>
       <description>The goal is to print a binary tree in such a way that each level of the tree is printed in a new line. Also, each level of the tree should be printed from left to right.
 Why is this cool? Because it uses channels to print the different levels of the tree.
 Reference Here is the entire code Let&amp;rsquo;s write some code Our tree definition:
 type Node struct { Value int Left *Node Right *Node } A tree is made up of one or more nodes, hence the Node struct.</description>
-    </item>
-    
-    <item>
-      <title>Random</title>
-      <link>https://hugo-toha.github.io/posts/random/</link>
-      <pubDate>Tue, 08 Jun 2021 06:00:23 +0600</pubDate>
-      
-      <guid>https://hugo-toha.github.io/posts/random/</guid>
-      <description>JJJ</description>
     </item>
     
     

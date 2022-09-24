@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Working with Binary Trees</title>
+    <title>I got this! No, I don&#39;t</title>
     <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -25,10 +25,10 @@
 
 
 
-<meta property="og:title" content="Working with Binary Trees" />
-<meta property="og:description" content="Work with Binary Tree" />
+<meta property="og:title" content="I got this! No, I don&#39;t" />
+<meta property="og:description" content="Putting too much on my plate" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rexposadas.github.io/posts/binarytree/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://rexposadas.github.io/posts/i_got_this/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-06-08T06:00:23+06:00" />
 <meta property="article:modified_time" content="2021-06-08T06:00:23+06:00" />
 
@@ -36,7 +36,7 @@
 
     
     
-<meta name="description" content="Work with Binary Tree" />
+<meta name="description" content="Putting too much on my plate" />
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
@@ -123,21 +123,21 @@
   
   
   
-    
-    
-  
   
     
-    <li><a class="active" href="/posts/binarytree/" title="BinaryTree">BinaryTree</a></li>
+    <li><a class="" href="/posts/binarytree/" title="BinaryTree">BinaryTree</a></li>
   
 
   
   
   
   
+    
+    
+  
   
     
-    <li><a class="" href="/posts/i_got_this/" title="I got this! No, I don&#39;t">I got this! No, I don&#39;t</a></li>
+    <li><a class="active" href="/posts/i_got_this/" title="I got this! No, I don&#39;t">I got this! No, I don&#39;t</a></li>
   
 
   
@@ -176,112 +176,23 @@
         </div>
 
         <div class="title">
-          <h1>Working with Binary Trees</h1>
+          <h1>I got this! No, I don&#39;t</h1>
         </div>
         
         <div class="post-content" id="post-content">
-          <p>The <strong>goal</strong> is to print a binary tree in such a way that each level of the tree is printed in a new line. Also, each level of the tree should be printed from left to right.</p>
-<p><em>Why</em> is this <em>cool</em>? Because it uses channels to print the different levels of the tree.</p>
-<h3 id="reference">Reference</h3>
-<ul>
-<li>Here is the <a href="https://github.com/rexposadas/notes/blob/master/blog/trees/main.go"><code>entire code</code></a></li>
-</ul>
-<h3 id="lets-write-some-code">Let&rsquo;s write some code</h3>
-<p>Our tree definition:</p>
-<pre><code>type Node struct {
-    Value int
-    Left  *Node
-    Right *Node
-}
-</code></pre>
-<p>A tree is made up of one or more nodes, hence the <code>Node</code> struct.</p>
-<p>The print function will print the tree taking into account the different levels of the tree.</p>
-<pre><code>// Print prints the entire tree from this node.	
-func (n *Node) Print() {
-
-	if n == nil {
-		return
-	}
-
-	// nodes in this channel are printed rightaway
-	currentLevel := make(chan *Node, 1000)
-
-	// notes in this channel will be printed after
-	// a new line is generated.
-	nextLevel := make(chan *Node, 1000)
-
-	// Let's ready the current node for printing
-	currentLevel &lt;- n // root of the tree
-
-	for len(currentLevel) &gt; 0 {
-
-		n := &lt;-currentLevel
-		fmt.Print(n.Value)
-
-		if n.Left != nil {
-			nextLevel &lt;- n.Left
-		}
-		if n.Right != nil {
-			nextLevel &lt;- n.Right
-		}
-
-		if len(currentLevel) == 0 {
-			fmt.Println(&quot;&quot;)
-			swap(currentLevel, nextLevel)
-		}
-	}
-}
-</code></pre>
-<p>What gives us the ability to determine when the next level of the tree has been reached? It&rsquo;s the two channels <code>currentLevel</code> and <code>nextLevel</code>.  The <code>currentLevel</code> channel represents what to print <strong>now</strong>. The <code>nextLevel</code> channel represents node(s) which should be printed <strong>after</strong> we have inserted a new line.</p>
-<h3 id="sample-tree">Sample Tree</h3>
-<img src="/images/circle.png" alt="Drawing"/>
-<h3 id="lets-print-stuff">Let&rsquo;s print stuff</h3>
-<p>Build the tree structure in the example then print it.</p>
-<pre><code>func main() {
-
-	// top node, considered  the first level
-	root := &amp;Node{
-		Value: 1,
-	}
-
-	// level 2
-	n2 := &amp;Node{Value: 2}
-	n3 := &amp;Node{Value: 3}
-	root.Left = n2
-	root.Right = n3
-
-	// level 3
-	n4 := &amp;Node{Value: 4}
-	n5 := &amp;Node{Value: 5}
-	n2.Left = n4
-	n2.Right = n5
-
-	n6 := &amp;Node{Value: 6}
-	n3.Right = n6
-
-	fmt.Println(&quot;Printing root node:&quot;)
-	root.Print()
-
-	fmt.Println(&quot;Printing node n2:&quot;)
-	n2.Print()
-
-	fmt.Println(&quot;Printing node n3:&quot;)
-	n3.Print()
-}
-</code></pre>
-<p>The output looks like this:</p>
-<pre><code>Printing root node:
-1
-23
-456
-Printing node n2:
-2
-45
-Printing node n3:
-3
-6
-</code></pre>
-<p>Note that each level of the tree is represented on it&rsquo;s separate row.  Each level is printed from left to right according to the sample tree.</p>
+          <p>Yup. I admit it. I failed. I was given an assignment, although the timeline was unrealistic, I still felt that I could finish it given enough energy, focus and long night. But I failed. I didn&rsquo;t meet the deadline.  Is it OK for a programmer, much less a consultant, to admit he failed. Maybe.</p>
+<h2 id="lessons-learned">Lessons learned.</h2>
+<p>I attribute my failure to my lack of communication and the bravado I displayed thinking that &ldquo;I got this!&rdquo;.</p>
+<h3 id="i-got-this">I got this!</h3>
+<p>No I didn&rsquo;t. I had to learn Linux namespaces, <a href="https://www.docker.com/">Docker</a>, <a href="http://nsq.io/">NSQ</a>, <a href="http://www.elasticsearch.org/">ElasticSearch</a>, <a href="http://www.elasticsearch.org/overview/kibana/">Kibana</a>, <a href="http://www.elasticsearch.org/overview/kibana/">LogStash</a>, a custom Go app, and secure tunneling with <a href="http://www.winton.org.uk/zebedee/">Zebedee</a> all in 6 weeks.</p>
+<p>What was I thinking? I <em>did</em> notify my managers that it was a hefty task for 6 weeks, but we really had no choice.  It was a fixed-bid project.</p>
+<p>What I did was what I thought was best at the time. I will put in as many hours and I can in a week, kill myself and get this done.  Heads down and ready to go&hellip; until I crashed and burned.  By the fourth week I was a walking zombie.  I had no taste for the work.  My motivation was gone and I was no where complete. Lesson learned? Maybe the first is, don&rsquo;t kill yourself.</p>
+<h3 id="ask-ask-ask">Ask, ask, ask.</h3>
+<p>There was so much space to cover I was stupid for me to <em>not</em> bug anyone about the code. The code was given handed to me to take over.  I was excited about the idea because, even now, I think it&rsquo;s a really cool project. I <em>wanted</em> to own it and finish it.</p>
+<p>But the folks who wrote the Go app did not have the time to help me.  What ended up happening was that I was swimming in really bad written Go code.  It violated the DRY principle in so many ways. But that&rsquo;s no excuse. I came in as a Go dev and it was my duty to fix all that. Right? Right!  So, no blame on the previous developers.</p>
+<p>I blame myself. Even <em>if</em> they were busy. I jeopardized the project by not asking.  I spun my wheels a few times and that ate up too much time and brain cells. I <em>should&rsquo;ve</em> raised the flag early and often.  I was brave and stupid. I&rsquo;d rather be a coward and lucky to be honest.</p>
+<h3 id="_something_-good-had-to-come-out-of-all-this-right"><em>Something</em> good had to come out of all this, right?</h3>
+<p>Of course. I was found another tool I love, <a href="https://www.docker.com/">Docker</a>. I don&rsquo;t think I could live without anymore.  I was also able to contribute to the NSQ project with this <a href="http://nsq.io/deployment/docker.html">documentation</a>.</p>
 
         </div>
 
@@ -318,11 +229,11 @@ Printing node n3:
   
 
   
-    
-    
-  
   
 
+  
+    
+    
   
   
 
@@ -333,9 +244,9 @@ Printing node n3:
 <div class="row next-prev-navigator">
   
     <div class="col-md-6 previous-article">
-      <a href="/posts/generated/generated_code/" title="Generated Art" class="btn btn-outline-info">
+      <a href="/posts/binarytree/" title="Working with Binary Trees" class="btn btn-outline-info">
         <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
-        <div class="next-prev-text">Generated Art</div>
+        <div class="next-prev-text">Working with Binary Trees</div>
       </a>
     </div>
   
@@ -345,9 +256,9 @@ Printing node n3:
         
       
       <div class="col-md-6 next-article">
-        <a href="/posts/i_got_this/" title="I got this! No, I don&#39;t" class="btn btn-outline-info">
+        <a href="/posts/beaver/" title="Intro to Python&#39;s Beaver" class="btn btn-outline-info">
           <div>Next <i class="fas fa-chevron-circle-right"></i></div>
-          <div class="next-prev-text">I got this! No, I don&#39;t</div>
+          <div class="next-prev-text">Intro to Python&#39;s Beaver</div>
         </a>
       </div>
     
