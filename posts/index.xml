@@ -18,6 +18,18 @@ Getting started If you&amp;rsquo;re like me, getting up and running is what I ne
     </item>
     
     <item>
+      <title>Beaver to NSQ</title>
+      <link>https://rexposadas.github.io/posts/beaver-to-nsq/</link>
+      <pubDate>Tue, 08 Jun 2021 06:00:23 +0600</pubDate>
+      
+      <guid>https://rexposadas.github.io/posts/beaver-to-nsq/</guid>
+      <description>Beaver to NSQ Configuring Beaver as a producer for nsq.
+For the examples below, 172.17.42.1 was used as the docker host IP. Change the example to the docker host ip in your environment.
+Links Video on setup. Quick Elk. A quick way to get an ELK stack running in your environment. Beaver configuration Set the output of Beaver to be an HTTP POST to nsqd.
+[beaver] logstash_version: 1transport: httphttp_url: http://172.</description>
+    </item>
+    
+    <item>
       <title>I got this! No, I don&#39;t</title>
       <link>https://rexposadas.github.io/posts/i_got_this/</link>
       <pubDate>Tue, 08 Jun 2021 06:00:23 +0600</pubDate>

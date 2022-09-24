@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tags</title>
+    <title>Beaver to NSQ</title>
     <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -25,19 +25,26 @@
 
 
 
-<meta property="og:title" content="Tags" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://rexposadas.github.io/tags/" />
+<meta property="og:title" content="Beaver to NSQ" />
+<meta property="og:description" content="Connecting Beaver to NSQ" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rexposadas.github.io/posts/beaver-to-nsq/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-06-08T06:00:23+06:00" />
+<meta property="article:modified_time" content="2021-06-08T06:00:23+06:00" />
 
 
 
     
     
-    <link rel="stylesheet" href="/css/layouts/list.css">
-    <link rel="stylesheet" href="/css/navigators/sidebar.css">
-    
-    <link rel="stylesheet" href="/css/style.css"/>
+<meta name="description" content="Connecting Beaver to NSQ" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+<link rel="stylesheet" href="/css/style.css"/>
 
 
 
@@ -92,9 +99,6 @@
 
       
       
-  
-  
-
   <section class="sidebar-section" id="sidebar-section">
     <div class="sidebar-holder">
       <div class="sidebar" id="sidebar">
@@ -103,14 +107,55 @@
         </form>
         <div class="sidebar-tree">
           <ul class="tree" id="tree">
-            <li id="list-heading"><a href="/tags" data-filter="all">Tags</a></li>
-            <div class="subtree taxonomy-terms">
-              
-              
-
-
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/generated/generated_code/" title="Generated Art">Generated Art</a></li>
+  
 
   
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/binarytree/" title="BinaryTree">BinaryTree</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/i_got_this/" title="I got this! No, I don&#39;t">I got this! No, I don&#39;t</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/beaver/" title="Beaver">Beaver</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/posts/beaver-to-nsq/" title="Beaver to NSQ">Beaver to NSQ</a></li>
   
 
 
@@ -125,21 +170,141 @@
       
       
 <section class="content-section" id="content-section">
-  <div class="content container-fluid" id="content">
-    <div class="container-fluid post-card-holder" id="post-card-holder">
+  <div class="content">
+    <div class="container p-0 read-area">
       
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(/images/circle.png);'>
+      </div>
+
       
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/rex_hu47fe1cd19085881e79115df9d8bc46ad_295531_120x120_fit_box_3.png' alt="Author Image">
+          <h5 class="author-name">Rex Posadas</h5>
+          <p>Tuesday, June 8, 2021</p>
+        </div>
+
+        <div class="title">
+          <h1>Beaver to NSQ</h1>
+        </div>
+        
+        <div class="post-content" id="post-content">
+          <h1 id="beaver-to-nsq">Beaver to NSQ</h1>
+<p>Configuring Beaver as a producer for nsq.</p>
+<p>For the examples below, <code>172.17.42.1</code> was used as the docker host IP.  Change the example to the docker host ip in your environment.</p>
+<h3 id="links">Links</h3>
+<ul>
+<li><a href="http://www.elasticsearch.org/webinars/elk-stack-devops-environment/?watch=1">Video</a> on setup.</li>
+<li><a href="https://github.com/kurtado/quick-elk">Quick Elk</a>. A quick way to get an ELK stack running in your environment.</li>
+</ul>
+<h3 id="beaver-configuration">Beaver configuration</h3>
+<p>Set the output of Beaver to be an HTTP POST to nsqd.</p>
+<pre><code>  [beaver]                                                                                                                                                      
+  logstash_version: 1
+  transport: http
+  http_url: http://172.17.42.1:4151/put?topic=test
+   
+  [in.log]
+</code></pre>
+<p>Setting up nsqd to listent to that port is documented on a different readme in this directory.</p>
+<h3 id="checking-out-setup">Checking out setup.</h3>
+<p>Write to our log file</p>
+<pre><code>echo &quot;my log message&quot; &gt;&gt; in.log
+</code></pre>
+<p>Beaver will read this list from the file and then POST that message to nsqd.  The message is sent as the body of the POST.</p>
+<h3 id="checking-our-config">Checking our config</h3>
+<p>On one terminal check nsqlookupd for the topic &ldquo;test&rdquo;.</p>
+<pre><code>watch -n 0.5 &quot;curl -s curl http://172.17.42.1:4161/topics&quot;
+</code></pre>
+<p>On another terminal check nsqd for increments in messages with the topic &ldquo;test&rdquo;</p>
+<pre><code>watch -n 0.5 &quot;curl -s http://172.17.42.1:4151/stats&quot;
+</code></pre>
+
+        </div>
+
+        
+        <div class="row pl-3 pr-3">
+        
+        <div class="col-md-6 share-buttons">
+        
+          </div>
+
+        
+        
+        </div>
+
+
+
       
+      <hr />
+        
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+    
+    
+  
+  
+
+
+<div class="row next-prev-navigator">
+  
+    <div class="col-md-6 previous-article">
+      <a href="/posts/beaver/" title="Intro to Python&#39;s Beaver" class="btn btn-outline-info">
+        <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+        <div class="next-prev-text">Intro to Python&#39;s Beaver</div>
+      </a>
     </div>
-    <div class="paginator">
+  
+  
+</div>
+
+      <hr />
+
       
+      
+
+      
+      
+
+      </div>
     </div>
   </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
 </section>
 
 
       
-       
+      
+  <section class="toc-section" id="toc-section">
+    
+  </section>
+
     </div>
 
     
@@ -303,7 +468,18 @@
 
     
     
-    <script src="/js/list.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+
+
+
+
 
 
     
