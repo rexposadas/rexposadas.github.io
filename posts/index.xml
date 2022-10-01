@@ -18,6 +18,16 @@ Getting started If you&amp;rsquo;re like me, getting up and running is what I ne
     </item>
     
     <item>
+      <title>A first look at generated art (golang)</title>
+      <link>https://rexposadas.github.io/posts/art_first_look/</link>
+      <pubDate>Tue, 08 Jun 2021 06:00:23 +0600</pubDate>
+      
+      <guid>https://rexposadas.github.io/posts/art_first_look/</guid>
+      <description>I wanted to start something, something that I can work on without the pressure of doing it well. For all you software developers out there, you know what I mean. You want to go back to a time when you developed software because you were curious and not because a customer is asking for a bug fix.
+Enter generated art. I am not an artist. I don&amp;rsquo;t have an artistic bone in my body.</description>
+    </item>
+    
+    <item>
       <title>Beaver to NSQ</title>
       <link>https://rexposadas.github.io/posts/beaver-to-nsq/</link>
       <pubDate>Tue, 08 Jun 2021 06:00:23 +0600</pubDate>
