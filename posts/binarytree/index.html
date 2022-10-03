@@ -251,8 +251,6 @@ func (n *Node) Print() {
 }
 </code></pre>
 <p>What gives us the ability to determine when the next level of the tree has been reached? It&rsquo;s the two channels <code>currentLevel</code> and <code>nextLevel</code>.  The <code>currentLevel</code> channel represents what to print <strong>now</strong>. The <code>nextLevel</code> channel represents node(s) which should be printed <strong>after</strong> we have inserted a new line.</p>
-<h3 id="sample-tree">Sample Tree</h3>
-<img src="/images/circle.png" alt="Drawing"/>
 <h3 id="lets-print-stuff">Let&rsquo;s print stuff</h3>
 <p>Build the tree structure in the example then print it.</p>
 <pre><code>func main() {
