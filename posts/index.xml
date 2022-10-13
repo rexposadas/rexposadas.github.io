@@ -6,7 +6,22 @@
     <description>Recent content in Posts on Software by Rex Posadas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Aug 2022 06:00:23 +0600</lastBuildDate><atom:link href="https://rexposadas.github.io/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+    <lastBuildDate>Mon, 10 Oct 2022 06:00:23 +0600</lastBuildDate><atom:link href="https://rexposadas.github.io/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>Achievements</title>
+      <link>https://rexposadas.github.io/posts/achievements/</link>
+      <pubDate>Mon, 10 Oct 2022 06:00:23 +0600</pubDate>
+      
+      <guid>https://rexposadas.github.io/posts/achievements/</guid>
+      <description>Achievements &amp;amp; Projects Contributed to business acquisition (2018)
+What: I built a cloud product for a small business
+Impact: The business was acquired by a larger company partly due to the product I built.
+My Role: Technical lead, architect and developer.
+Technical co-founder (2014)
+What: I co-founded a ag-tech startup which provided business intelligence to farmers.
+Impact: Startup was a finalist in SXSW. SXSW is a tech festival held in Austin, TX.</description>
+    </item>
+    
+    <item>
       <title>A first look at generated art (golang)</title>
       <link>https://rexposadas.github.io/posts/art_first_look/</link>
       <pubDate>Mon, 08 Aug 2022 06:00:23 +0600</pubDate>
