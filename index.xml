@@ -6,7 +6,18 @@
     <description>Recent content on Software by Rex Posadas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Oct 2022 06:00:23 +0600</lastBuildDate><atom:link href="https://rexposadas.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+    <lastBuildDate>Tue, 01 Nov 2022 00:13:00 +0600</lastBuildDate><atom:link href="https://rexposadas.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>First week learning Cyber Security</title>
+      <link>https://rexposadas.github.io/posts/cyber_security_week/</link>
+      <pubDate>Tue, 01 Nov 2022 00:13:00 +0600</pubDate>
+      
+      <guid>https://rexposadas.github.io/posts/cyber_security_week/</guid>
+      <description>What I learned my first week looking into cyber security:
+What I learned as a web developer applies. It&amp;rsquo;s more fun to learn than regular web development. It broadens my skill set. TLDR It was an exciting week dipping my toes in cyber security. Links and info I came across during my discovery:
+cat To read plain text files. wget To download files. file To look at the file type. exiftools Read and write meta data.</description>
+    </item>
+    
+    <item>
       <title>Achievements</title>
       <link>https://rexposadas.github.io/posts/achievements/</link>
       <pubDate>Mon, 10 Oct 2022 06:00:23 +0600</pubDate>
