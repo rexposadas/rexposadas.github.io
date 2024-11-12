@@ -1,51 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Generated Art</title>
     <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-
-<link rel="stylesheet" href="/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="/css/layouts/main.css"/>
-<link rel="stylesheet" href="/css/navigators/navbar.css"/>
-<link rel="stylesheet" href="/css/plyr.css"/>
-<link rel="stylesheet" href="/css/flag-icon.min.css"/>
-
-
-<link rel="stylesheet" href="/google-fonts/Mulish/mulish.css"/>
-
-
-<link rel="stylesheet" href="/fontawesome/css/all.min.css"/>
+<link rel="stylesheet" href="/application.eee28c6b9bcdfff2e871d61e6452c5d934440b55492219aa06a62a39fcf37681.css" integrity="sha256-7uKMa5vN//LocdYeZFLF2TREC1VJIhmqBqYqOfzzdoE=" />
 
 
 
 
 
+<meta property="og:url" content="https://rexposadas.github.io/posts/generated/generated_code/">
+  <meta property="og:site_name" content="Rex Posadas Blog">
+  <meta property="og:title" content="Generated Art">
+  <meta property="og:description" content="Art I generated">
+  <meta property="og:locale" content="bn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-06-08T06:00:23+06:00">
+    <meta property="article:modified_time" content="2022-06-08T06:00:23+06:00">
 
-
-<meta property="og:title" content="Generated Art" />
-<meta property="og:description" content="Art I generated" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://rexposadas.github.io/posts/generated/generated_code/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-06-08T06:00:23+06:00" />
-<meta property="article:modified_time" content="2022-06-08T06:00:23+06:00" />
-
-
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Generated Art">
+  <meta name="twitter:description" content="Art I generated">
 
     
     
 <meta name="description" content="Art I generated" />
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
-/>
-<link rel="stylesheet" href="/css/layouts/single.css"/>
-<link rel="stylesheet" href="/css/navigators/sidebar.css">
-
-<link rel="stylesheet" href="/css/style.css"/>
-
 
 
     
@@ -53,10 +37,21 @@
 
 
 
-</head>
+<script>
+      theme = localStorage.getItem('theme-scheme') || localStorage.getItem('darkmode:color-scheme') || 'light';
+      if (theme == 'system') {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        } else {
+          theme = 'light';
+        }
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    </script>
+  </head>
 
-  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
-    <div class="container-fluid bg-dimmed wrapper">
+  <body class="type-posts kind-page" data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-offset="80">
+    <div class="container-fluid bg-secondary wrapper">
       
       
     
@@ -72,21 +67,84 @@
 
 
 
-<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar shadow " id="top-navbar">
   <div class="container">
-      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
-      <span class="navbar-toggler-icon"></span>
+    
+    <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button">
+      <i data-feather="sidebar"></i>
     </button>
+    
     <a class="navbar-brand" href="/">
-      Software by Rex Posadas</a>
-    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
-      <span class="navbar-toggler-icon"></span>
+      Rex Posadas Blog</a>
+    <button
+      class="navbar-toggler navbar-light"
+      id="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#top-nav-items"
+      aria-label="menu"
+    >
+      <i data-feather="menu"></i>
     </button>
 
-    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
-      <ul class="navbar-nav ml-auto">
-      
-      
+    <div class="collapse navbar-collapse dynamic-navbar" id="top-nav-items">
+      <ul class="nav navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/#home">Home</a>
+        </li>
+        
+          
+          
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#skills">Skills</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#recent-posts">Recent Posts</a>
+                </li>
+              
+            
+          
+        
+        
+        
+        
+        
+        
+        
       </ul>
     </div>
   </div>
@@ -107,7 +165,7 @@
         </form>
         <div class="sidebar-tree">
           <ul class="tree" id="tree">
-            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <li id="list-heading"><a href="/posts/" data-filter="all">Posts</a></li>
             <div class="subtree">
                 
   
@@ -119,7 +177,7 @@
   
   
     
-    <li><a class="active" href="/posts/generated/generated_code/" title="Generated Art">Generated Art</a></li>
+    <li><a class="active list-link" href="/posts/generated/generated_code/" title="Generated Art">Generated Art</a></li>
   
 
   
@@ -128,7 +186,7 @@
   
   
     
-    <li><a class="" href="/posts/binarytree/" title="BinaryTree">BinaryTree</a></li>
+    <li><a class=" list-link" href="/posts/binarytree/" title="BinaryTree">BinaryTree</a></li>
   
 
   
@@ -137,7 +195,7 @@
   
   
     
-    <li><a class="" href="/posts/cyber_security_week/" title="Cyber Security First Week">Cyber Security First Week</a></li>
+    <li><a class=" list-link" href="/posts/cyber_security_week/" title="Cyber Security First Week">Cyber Security First Week</a></li>
   
 
   
@@ -146,7 +204,7 @@
   
   
     
-    <li><a class="" href="/posts/i_got_this/" title="I got this! No, I don&#39;t">I got this! No, I don&#39;t</a></li>
+    <li><a class=" list-link" href="/posts/i_got_this/" title="I got this! No, I don&#39;t">I got this! No, I don&#39;t</a></li>
   
 
   
@@ -155,7 +213,7 @@
   
   
     
-    <li><a class="" href="/posts/art_first_look/" title="A first look at Generated Art">A first look at Generated Art</a></li>
+    <li><a class=" list-link" href="/posts/art_first_look/" title="A first look at Generated Art">A first look at Generated Art</a></li>
   
 
   
@@ -164,7 +222,7 @@
   
   
     
-    <li><a class="" href="/posts/achievements/" title="Achievements">Achievements</a></li>
+    <li><a class=" list-link" href="/posts/achievements/" title="Achievements">Achievements</a></li>
   
 
   
@@ -173,7 +231,7 @@
   
   
     
-    <li><a class="" href="/posts/beaver/" title="Beaver">Beaver</a></li>
+    <li><a class=" list-link" href="/posts/beaver/" title="Beaver">Beaver</a></li>
   
 
   
@@ -182,7 +240,7 @@
   
   
     
-    <li><a class="" href="/posts/beaver-to-nsq/" title="Beaver to NSQ">Beaver to NSQ</a></li>
+    <li><a class=" list-link" href="/posts/beaver-to-nsq/" title="Beaver to NSQ">Beaver to NSQ</a></li>
   
 
   
@@ -191,7 +249,7 @@
   
   
     
-    <li><a class="" href="/posts/coding_101_bcd/" title="Coding 101 - Bacolod Rotary Club">Coding 101 - Bacolod Rotary Club</a></li>
+    <li><a class=" list-link" href="/posts/coding_101_bcd/" title="Coding 101 - Bacolod Rotary Club">Coding 101 - Bacolod Rotary Club</a></li>
   
 
 
@@ -214,15 +272,20 @@
 
       
       <div class="page-content">
-        <div class="author-profile ml-auto align-self-lg-center">
-          <img class="rounded-circle" src='/images/author/rex_hu47fe1cd19085881e79115df9d8bc46ad_295531_120x120_fit_box_3.png' alt="Author Image">
+        
+        <div class="author-profile ms-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/rex_hu1082328151654760094.png' alt="Author Image">
           <h5 class="author-name">Rex Posadas</h5>
-          <p>Wednesday, June 8, 2022</p>
+          <p class="text-muted">Wednesday, June 8, 2022</p>
         </div>
-
+        
+        
         <div class="title">
           <h1>Generated Art</h1>
         </div>
+
+        
+
         
         <div class="post-content" id="post-content">
           <p>Starting with generated art (using Golang).  What is it? It&rsquo;s digital art created by code.</p>
@@ -233,7 +296,7 @@
 <h2 id="quick-start">Quick start</h2>
 <p>I created a CLI which can produce generated art pretty easily. Here&rsquo;s the repo</p>
 <p><code>https://github.com/rexposadas/art</code></p>
-<p>If you have <a href="https://go.dev/doc/install">Go installed</a>, you can run it with the following.</p>
+<p>If you have <a href="https://go.dev/doc/install" target="_blank" rel="noopener">Go installed</a>, you can run it with the following.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>go install github.com/rexposadas/art
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>art samples 
@@ -243,10 +306,10 @@
         </div>
 
         
-        <div class="row pl-3 pr-3">
+        <div class="row ps-3 pe-3">
         
-        <div class="col-md-6 share-buttons">
-        
+          <div class="col-md-6 share-buttons">
+          
           </div>
 
         
@@ -308,7 +371,7 @@
       
       
       <div class="col-md-12 next-article">
-        <a href="/posts/binarytree/" title="Working with Binary Trees" class="btn btn-outline-info">
+        <a href="/posts/binarytree/" title="Working with Binary Trees" class="btn filled-button">
           <div>Next <i class="fas fa-chevron-circle-right"></i></div>
           <div class="next-prev-text">Working with Binary Trees</div>
         </a>
@@ -328,8 +391,9 @@
     </div>
   </div>
   
-  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
-  
+  <a id="scroll-to-top" class="btn" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Scroll to top">
+    <i class="fas fa-chevron-circle-up"></i>
+  </a>
 </section>
 
 
@@ -400,7 +464,7 @@
 
   <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
     <div class="container pt-5">
-      <div class="row text-left">
+      <div class="row text-start">
         
         <div class="col-md-4 col-sm-12">
           <h5>Navigation</h5>
@@ -460,6 +524,20 @@
         
         
           
+          <div class="col-md-4 col-sm-12">
+            <p>Stay up to date with email notification</p>
+            
+              <form method='post' action='https://blogtrottr.com'>
+              <div class="form-group">
+              <input type='email' class="form-control" name='btr_email' placeholder="Enter email"/><br />
+              <input type='hidden' name='btr_url' value='https://rexposadas.github.io//index.xml' />
+              <input type='hidden' name='schedule_type' value='1' />
+              <small id="emailHelp" class="form-text text-muted">By entering your email address, you agree to receive the newsletter of this website.</small>
+              <button type="submit" class="btn btn-info"> Submit </button>
+              </div>
+              </form>
+            
+          </div>
         
       </div>
     </div>
@@ -467,15 +545,15 @@
     
     <hr />
     <div class="container">
-      <div class="row text-left">
+      <div class="row text-start">
         <div class="col-md-4">
-          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
-            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
+          <a id="theme" href="https://github.com/hugo-toha/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu16779671404603505019.png" alt="Toha Theme Logo">
             Toha
           </a>
         </div>
         <div class="col-md-4 text-center">© 2022 Copyright.</div>
-        <div class="col-md-4 text-right">
+        <div class="col-md-4 text-end">
           <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
           <img
             src="/images/hugo-logo.svg"
@@ -490,31 +568,11 @@
   </footer>
 
 
-    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="/js/popper.min.js"></script>
-<script type="text/javascript" src="/js/bootstrap.min.js"></script>
-
-<script type="text/javascript" src="/js/navbar.js"></script>
-<script type="text/javascript" src="/js/plyr.js"></script>
-<script type="text/javascript" src="/js/main.js"></script>
-
+    <script src="/application.926f97d960749f517a37a37f04e35ff8e24cf84e5c078869194e04729bcdb8aa.js" integrity="sha256-km&#43;X2WB0n1F6N6N/BONf&#43;OJM&#43;E5cB4hpGU4EcpvNuKo=" defer></script>
 
 
     
-    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
-<script src="/js/single.js"></script>
-<script>
-  hljs.initHighlightingOnLoad();
-</script>
-
-
-
-
-
-
-
-
+     
 
     
 </body>
