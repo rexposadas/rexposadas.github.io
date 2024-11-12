@@ -1,35 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <title>Coding 101 - Bacolod Rotary Club</title>
     <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<link rel="stylesheet" href="/application.eee28c6b9bcdfff2e871d61e6452c5d934440b55492219aa06a62a39fcf37681.css" integrity="sha256-7uKMa5vN//LocdYeZFLF2TREC1VJIhmqBqYqOfzzdoE=" />
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/plyr.css"/>
+<link rel="stylesheet" href="/css/flag-icon.min.css"/>
+
+
+<link rel="stylesheet" href="/google-fonts/Mulish/mulish.css"/>
+
+
+<link rel="stylesheet" href="/fontawesome/css/all.min.css"/>
 
 
 
 
 
-<meta property="og:url" content="https://rexposadas.github.io/posts/coding_101_bcd/">
-  <meta property="og:site_name" content="Rex Posadas Blog">
-  <meta property="og:title" content="Coding 101 - Bacolod Rotary Club">
-  <meta property="og:description" content="All the info you need for the Bacolod Rotary Club Coding 101">
-  <meta property="og:locale" content="bn">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2022-11-28T06:00:23+06:00">
-    <meta property="article:modified_time" content="2022-11-28T06:00:23+06:00">
 
-    
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Coding 101 - Bacolod Rotary Club">
-  <meta name="twitter:description" content="All the info you need for the Bacolod Rotary Club Coding 101">
+
+<meta property="og:title" content="Coding 101 - Bacolod Rotary Club" />
+<meta property="og:description" content="All the info you need for the Bacolod Rotary Club Coding 101" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rexposadas.github.io/posts/coding_101_bcd/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-11-28T06:00:23+06:00" />
+<meta property="article:modified_time" content="2022-11-28T06:00:23+06:00" />
+
+
 
     
     
 <meta name="description" content="All the info you need for the Bacolod Rotary Club Coding 101" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+<link rel="stylesheet" href="/css/style.css"/>
+
 
 
     
@@ -37,21 +53,10 @@
 
 
 
-<script>
-      theme = localStorage.getItem('theme-scheme') || localStorage.getItem('darkmode:color-scheme') || 'light';
-      if (theme == 'system') {
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          theme = 'dark';
-        } else {
-          theme = 'light';
-        }
-      }
-      document.documentElement.setAttribute('data-theme', theme);
-    </script>
-  </head>
+</head>
 
-  <body class="type-posts kind-page" data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-offset="80">
-    <div class="container-fluid bg-secondary wrapper">
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
       
       
     
@@ -67,84 +72,21 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-  
-
-
-<nav class="navbar navbar-expand-xl top-navbar shadow " id="top-navbar">
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
   <div class="container">
-    
-    <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button">
-      <i data-feather="sidebar"></i>
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
     </button>
-    
     <a class="navbar-brand" href="/">
-      Rex Posadas Blog</a>
-    <button
-      class="navbar-toggler navbar-light"
-      id="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#top-nav-items"
-      aria-label="menu"
-    >
-      <i data-feather="menu"></i>
+      Software by Rex Posadas</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse dynamic-navbar" id="top-nav-items">
-      <ul class="nav navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/#home">Home</a>
-        </li>
-        
-          
-          
-            
-              
-              
-                <li class="nav-item">
-                  <a class="nav-link" href="/#skills">Skills</a>
-                </li>
-              
-            
-            
-              
-              
-                <li class="nav-item">
-                  <a class="nav-link" href="/#recent-posts">Recent Posts</a>
-                </li>
-              
-            
-          
-        
-        
-        
-        
-        
-        
-        
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      
       </ul>
     </div>
   </div>
@@ -165,7 +107,7 @@
         </form>
         <div class="sidebar-tree">
           <ul class="tree" id="tree">
-            <li id="list-heading"><a href="/posts/" data-filter="all">Posts</a></li>
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
             <div class="subtree">
                 
   
@@ -174,7 +116,7 @@
   
   
     
-    <li><a class=" list-link" href="/posts/generated/generated_code/" title="Generated Art">Generated Art</a></li>
+    <li><a class="" href="/posts/generated/generated_code/" title="Generated Art">Generated Art</a></li>
   
 
   
@@ -183,7 +125,7 @@
   
   
     
-    <li><a class=" list-link" href="/posts/binarytree/" title="BinaryTree">BinaryTree</a></li>
+    <li><a class="" href="/posts/binarytree/" title="BinaryTree">BinaryTree</a></li>
   
 
   
@@ -192,7 +134,7 @@
   
   
     
-    <li><a class=" list-link" href="/posts/cyber_security_week/" title="Cyber Security First Week">Cyber Security First Week</a></li>
+    <li><a class="" href="/posts/cyber_security_week/" title="Cyber Security First Week">Cyber Security First Week</a></li>
   
 
   
@@ -201,7 +143,7 @@
   
   
     
-    <li><a class=" list-link" href="/posts/i_got_this/" title="I got this! No, I don&#39;t">I got this! No, I don&#39;t</a></li>
+    <li><a class="" href="/posts/i_got_this/" title="I got this! No, I don&#39;t">I got this! No, I don&#39;t</a></li>
   
 
   
@@ -210,7 +152,7 @@
   
   
     
-    <li><a class=" list-link" href="/posts/art_first_look/" title="A first look at Generated Art">A first look at Generated Art</a></li>
+    <li><a class="" href="/posts/art_first_look/" title="A first look at Generated Art">A first look at Generated Art</a></li>
   
 
   
@@ -219,7 +161,7 @@
   
   
     
-    <li><a class=" list-link" href="/posts/achievements/" title="Achievements">Achievements</a></li>
+    <li><a class="" href="/posts/achievements/" title="Achievements">Achievements</a></li>
   
 
   
@@ -228,7 +170,7 @@
   
   
     
-    <li><a class=" list-link" href="/posts/beaver/" title="Beaver">Beaver</a></li>
+    <li><a class="" href="/posts/beaver/" title="Beaver">Beaver</a></li>
   
 
   
@@ -237,7 +179,7 @@
   
   
     
-    <li><a class=" list-link" href="/posts/beaver-to-nsq/" title="Beaver to NSQ">Beaver to NSQ</a></li>
+    <li><a class="" href="/posts/beaver-to-nsq/" title="Beaver to NSQ">Beaver to NSQ</a></li>
   
 
   
@@ -249,7 +191,7 @@
   
   
     
-    <li><a class="active list-link" href="/posts/coding_101_bcd/" title="Coding 101 - Bacolod Rotary Club">Coding 101 - Bacolod Rotary Club</a></li>
+    <li><a class="active" href="/posts/coding_101_bcd/" title="Coding 101 - Bacolod Rotary Club">Coding 101 - Bacolod Rotary Club</a></li>
   
 
 
@@ -272,20 +214,15 @@
 
       
       <div class="page-content">
-        
-        <div class="author-profile ms-auto align-self-lg-center">
-          <img class="rounded-circle" src='/images/author/rex_hu1082328151654760094.png' alt="Author Image">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/rex_hu47fe1cd19085881e79115df9d8bc46ad_295531_120x120_fit_box_3.png' alt="Author Image">
           <h5 class="author-name">Rex Posadas</h5>
-          <p class="text-muted">Monday, November 28, 2022</p>
+          <p>Monday, November 28, 2022</p>
         </div>
-        
-        
+
         <div class="title">
           <h1>Coding 101 - Bacolod Rotary Club</h1>
         </div>
-
-        
-
         
         <div class="post-content" id="post-content">
           <p>This is page is dedicated to the Bacolod Rotary club coding class.</p>
@@ -296,25 +233,25 @@
 </ol>
 <h1 id="resources">Resources</h1>
 <ol>
-<li><a href="https://code.visualstudio.com/download" target="_blank" rel="noopener">Visual Studio Code</a> - This is the editor we&rsquo;ll be using. It&rsquo;s free and open source.  This is OPTIONAL. If you prefer a different editor, you can use that.</li>
-<li><a href="https://github.com/" target="_blank" rel="noopener">Github</a> - This is where we&rsquo;ll be hosting our code. It&rsquo;s free. You&rsquo;ll need to create an account. Once you create an account, send me a message with the URL of your profile.</li>
-<li>List of <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/" target="_blank" rel="noopener">homeworks</a>.</li>
+<li><a href="https://code.visualstudio.com/download">Visual Studio Code</a> - This is the editor we&rsquo;ll be using. It&rsquo;s free and open source.  This is OPTIONAL. If you prefer a different editor, you can use that.</li>
+<li><a href="https://github.com/">Github</a> - This is where we&rsquo;ll be hosting our code. It&rsquo;s free. You&rsquo;ll need to create an account. Once you create an account, send me a message with the URL of your profile.</li>
+<li>List of <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/">homeworks</a>.</li>
 </ol>
 <h2 id="day-2--dec-8-2023">Day 2 ( Dec. 8, 2023)</h2>
 <ol>
 <li>Review of day 1.</li>
-<li>Same homework from day 1. <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/" target="_blank" rel="noopener">Do these exercises</a></li>
+<li>Same homework from day 1. <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/">Do these exercises</a></li>
 </ol>
 <h2 id="day-1-agenda-nov-1-2022">Day 1 agenda (Nov. 1, 2022)</h2>
 <ol>
 <li>Introduction to software development.</li>
 <li>Setting up your laptop (if you brought one).</li>
-<li>Intro to <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/" target="_blank" rel="noopener">JavaScript</a></li>
+<li>Intro to <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/">JavaScript</a></li>
 </ol>
 <h3 id="homework">Homework</h3>
 <p>Do this before our next class.</p>
 <ol>
-<li>Create an account here: <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener">https://www.freecodecamp.org/</a> . That&rsquo;s the website that will have the exercises for the class.</li>
+<li>Create an account here: <a href="https://www.freecodecamp.org/">https://www.freecodecamp.org/</a> . That&rsquo;s the website that will have the exercises for the class.</li>
 <li>At the bottom of that page, you should see a section that says &ldquo;JavaScript Algorithms and Data Structures&rdquo;. Click that section. You should be taken to a list of exercises.</li>
 <li>Start from the top and work on the exercises until you get stuck. Then message me in Facebook to let me know which section you were able to do last.</li>
 </ol>
@@ -322,17 +259,17 @@
 <h3 id="homework-extra-credit">Homework (Extra credit)</h3>
 <p>Do this only after you are done with the mandatory exercises.</p>
 <ol>
-<li>Create an account in <a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a></li>
+<li>Create an account in <a href="https://github.com/">https://github.com/</a></li>
 <li>Send me your github name so I can follow you.</li>
 </ol>
 
         </div>
 
         
-        <div class="row ps-3 pe-3">
+        <div class="row pl-3 pr-3">
         
-          <div class="col-md-6 share-buttons">
-          
+        <div class="col-md-6 share-buttons">
+        
           </div>
 
         
@@ -391,7 +328,7 @@
 <div class="row next-prev-navigator">
   
     <div class="col-md-6 previous-article">
-      <a href="/posts/beaver-to-nsq/" title="Beaver to NSQ" class="btn filled-button">
+      <a href="/posts/beaver-to-nsq/" title="Beaver to NSQ" class="btn btn-outline-info">
         <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
         <div class="next-prev-text">Beaver to NSQ</div>
       </a>
@@ -412,9 +349,8 @@
     </div>
   </div>
   
-  <a id="scroll-to-top" class="btn" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Scroll to top">
-    <i class="fas fa-chevron-circle-up"></i>
-  </a>
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
 </section>
 
 
@@ -485,7 +421,7 @@
 
   <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
     <div class="container pt-5">
-      <div class="row text-start">
+      <div class="row text-left">
         
         <div class="col-md-4 col-sm-12">
           <h5>Navigation</h5>
@@ -545,20 +481,6 @@
         
         
           
-          <div class="col-md-4 col-sm-12">
-            <p>Stay up to date with email notification</p>
-            
-              <form method='post' action='https://blogtrottr.com'>
-              <div class="form-group">
-              <input type='email' class="form-control" name='btr_email' placeholder="Enter email"/><br />
-              <input type='hidden' name='btr_url' value='https://rexposadas.github.io//index.xml' />
-              <input type='hidden' name='schedule_type' value='1' />
-              <small id="emailHelp" class="form-text text-muted">By entering your email address, you agree to receive the newsletter of this website.</small>
-              <button type="submit" class="btn btn-info"> Submit </button>
-              </div>
-              </form>
-            
-          </div>
         
       </div>
     </div>
@@ -566,15 +488,15 @@
     
     <hr />
     <div class="container">
-      <div class="row text-start">
+      <div class="row text-left">
         <div class="col-md-4">
-          <a id="theme" href="https://github.com/hugo-toha/toha" target="_blank" rel="noopener">
-            <img src="/images/theme-logo_hu16779671404603505019.png" alt="Toha Theme Logo">
+          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
             Toha
           </a>
         </div>
         <div class="col-md-4 text-center">© 2022 Copyright.</div>
-        <div class="col-md-4 text-end">
+        <div class="col-md-4 text-right">
           <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
           <img
             src="/images/hugo-logo.svg"
@@ -589,11 +511,31 @@
   </footer>
 
 
-    <script src="/application.926f97d960749f517a37a37f04e35ff8e24cf84e5c078869194e04729bcdb8aa.js" integrity="sha256-km&#43;X2WB0n1F6N6N/BONf&#43;OJM&#43;E5cB4hpGU4EcpvNuKo=" defer></script>
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/js/navbar.js"></script>
+<script type="text/javascript" src="/js/plyr.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
 
 
     
-     
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+
+
+
+
+
 
     
 </body>

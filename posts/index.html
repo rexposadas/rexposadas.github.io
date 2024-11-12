@@ -1,50 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <title>Posts</title>
     <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<link rel="stylesheet" href="/application.eee28c6b9bcdfff2e871d61e6452c5d934440b55492219aa06a62a39fcf37681.css" integrity="sha256-7uKMa5vN//LocdYeZFLF2TREC1VJIhmqBqYqOfzzdoE=" />
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/plyr.css"/>
+<link rel="stylesheet" href="/css/flag-icon.min.css"/>
+
+
+<link rel="stylesheet" href="/google-fonts/Mulish/mulish.css"/>
+
+
+<link rel="stylesheet" href="/fontawesome/css/all.min.css"/>
 
 
 
 
 
-<meta property="og:url" content="https://rexposadas.github.io/posts/">
-  <meta property="og:site_name" content="Rex Posadas Blog">
-  <meta property="og:title" content="Posts">
-  <meta property="og:locale" content="bn">
-  <meta property="og:type" content="website">
+
+
+<meta property="og:title" content="Posts" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://rexposadas.github.io/posts/" />
+
+
 
     
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Posts">
+    
+    <link rel="stylesheet" href="/css/layouts/list.css">
+    <link rel="stylesheet" href="/css/navigators/sidebar.css">
+    
+    <link rel="stylesheet" href="/css/style.css"/>
+
+
 
     
-     
-
-    
 
 
 
 
-<script>
-      theme = localStorage.getItem('theme-scheme') || localStorage.getItem('darkmode:color-scheme') || 'light';
-      if (theme == 'system') {
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          theme = 'dark';
-        } else {
-          theme = 'light';
-        }
-      }
-      document.documentElement.setAttribute('data-theme', theme);
-    </script>
-  </head>
+</head>
 
-  <body class="type-posts kind-section" data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-offset="80">
-    <div class="container-fluid bg-secondary wrapper">
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
       
       
     
@@ -60,84 +65,21 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-  
-
-
-<nav class="navbar navbar-expand-xl top-navbar shadow " id="top-navbar">
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
   <div class="container">
-    
-    <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button">
-      <i data-feather="sidebar"></i>
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
     </button>
-    
     <a class="navbar-brand" href="/">
-      Rex Posadas Blog</a>
-    <button
-      class="navbar-toggler navbar-light"
-      id="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#top-nav-items"
-      aria-label="menu"
-    >
-      <i data-feather="menu"></i>
+      Software by Rex Posadas</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse dynamic-navbar" id="top-nav-items">
-      <ul class="nav navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/#home">Home</a>
-        </li>
-        
-          
-          
-            
-              
-              
-                <li class="nav-item">
-                  <a class="nav-link" href="/#skills">Skills</a>
-                </li>
-              
-            
-            
-              
-              
-                <li class="nav-item">
-                  <a class="nav-link" href="/#recent-posts">Recent Posts</a>
-                </li>
-              
-            
-          
-        
-        
-        
-        
-        
-        
-        
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      
       </ul>
     </div>
   </div>
@@ -170,7 +112,7 @@
   
   
     
-    <li><a class=" list-link" href="/posts/generated/generated_code/" title="Generated Art">Generated Art</a></li>
+    <li><a class="" href="/posts/generated/generated_code/" title="Generated Art">Generated Art</a></li>
   
 
   
@@ -179,7 +121,7 @@
   
   
     
-    <li><a class=" list-link" href="/posts/binarytree/" title="BinaryTree">BinaryTree</a></li>
+    <li><a class="" href="/posts/binarytree/" title="BinaryTree">BinaryTree</a></li>
   
 
   
@@ -188,7 +130,7 @@
   
   
     
-    <li><a class=" list-link" href="/posts/cyber_security_week/" title="Cyber Security First Week">Cyber Security First Week</a></li>
+    <li><a class="" href="/posts/cyber_security_week/" title="Cyber Security First Week">Cyber Security First Week</a></li>
   
 
   
@@ -197,7 +139,7 @@
   
   
     
-    <li><a class=" list-link" href="/posts/i_got_this/" title="I got this! No, I don&#39;t">I got this! No, I don&#39;t</a></li>
+    <li><a class="" href="/posts/i_got_this/" title="I got this! No, I don&#39;t">I got this! No, I don&#39;t</a></li>
   
 
   
@@ -206,7 +148,7 @@
   
   
     
-    <li><a class=" list-link" href="/posts/art_first_look/" title="A first look at Generated Art">A first look at Generated Art</a></li>
+    <li><a class="" href="/posts/art_first_look/" title="A first look at Generated Art">A first look at Generated Art</a></li>
   
 
   
@@ -215,7 +157,7 @@
   
   
     
-    <li><a class=" list-link" href="/posts/achievements/" title="Achievements">Achievements</a></li>
+    <li><a class="" href="/posts/achievements/" title="Achievements">Achievements</a></li>
   
 
   
@@ -224,7 +166,7 @@
   
   
     
-    <li><a class=" list-link" href="/posts/beaver/" title="Beaver">Beaver</a></li>
+    <li><a class="" href="/posts/beaver/" title="Beaver">Beaver</a></li>
   
 
   
@@ -233,7 +175,7 @@
   
   
     
-    <li><a class=" list-link" href="/posts/beaver-to-nsq/" title="Beaver to NSQ">Beaver to NSQ</a></li>
+    <li><a class="" href="/posts/beaver-to-nsq/" title="Beaver to NSQ">Beaver to NSQ</a></li>
   
 
   
@@ -242,7 +184,7 @@
   
   
     
-    <li><a class=" list-link" href="/posts/coding_101_bcd/" title="Coding 101 - Bacolod Rotary Club">Coding 101 - Bacolod Rotary Club</a></li>
+    <li><a class="" href="/posts/coding_101_bcd/" title="Coding 101 - Bacolod Rotary Club">Coding 101 - Bacolod Rotary Club</a></li>
   
 
 
@@ -262,78 +204,67 @@
       
       
       
-      
         
           <div class="post-card">
-  <div class="card">
-    <div class="card-head">
-      <a href="/posts/coding_101_bcd/" class="post-card-link">
+  <a href="/posts/coding_101_bcd/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
         <img class="card-img-top" src='/images/generated/circles_gradient.png' alt="Hero Image">
-      </a>
-    </div>
-    <div class="card-body">
-      <a href="/posts/coding_101_bcd/" class="post-card-link">
+      </div>
+      <div class="card-body">
         <h5 class="card-title">Coding 101 - Bacolod Rotary Club</h5>
         <p class="card-text post-summary">This is page is dedicated to the Bacolod Rotary club coding class.
-Requirements for the class Laptop - We&rsquo;ll be coding so you need this. Pen &amp; Paper - You&rsquo;ll need this to take notes. Resources Visual Studio Code - This is the editor we&rsquo;ll be using. It&rsquo;s free and open source. This is OPTIONAL. If you prefer a different editor, you can use that. Github - This is where we&rsquo;ll be hosting our code. It&rsquo;s free. You&rsquo;ll need to create an account. Once you create an account, send me a message with the URL of your profile. List of homeworks. Day 2 ( Dec. 8, 2023) Review of day 1. Same homework from day 1. Do these exercises Day 1 agenda (Nov. 1, 2022) Introduction to software development. Setting up your laptop (if you brought one). Intro to JavaScript Homework Do this before our next class.
-</p>
-      </a>
-      
+Requirements for the class Laptop - We&rsquo;ll be coding so you need this. Pen &amp; Paper - You&rsquo;ll need this to take notes. Resources Visual Studio Code - This is the editor we&rsquo;ll be using. It&rsquo;s free and open source. This is OPTIONAL. If you prefer a different editor, you can use that. Github - This is where we&rsquo;ll be hosting our code.</p>
+      </div>
+      <div class="card-footer">
+
+        <a
+        href="/posts/coding_101_bcd/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
     </div>
-    <div class="card-footer">
-      <span class="float-start">
-          Monday, November 28, 2022
-          </span>
-      <a
-      href="/posts/coding_101_bcd/"
-      class="float-end btn btn-outline-info btn-sm">Read</a>
-    </div>
-  </div>
+  </a>
 </div>
 
         
       
         
           <div class="post-card">
-  <div class="card">
-    <div class="card-head">
-      <a href="/posts/cyber_security_week/" class="post-card-link">
+  <a href="/posts/cyber_security_week/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
         <img class="card-img-top" src='/images/generated/circle-plaid.png' alt="Hero Image">
-      </a>
-    </div>
-    <div class="card-body">
-      <a href="/posts/cyber_security_week/" class="post-card-link">
+      </div>
+      <div class="card-body">
         <h5 class="card-title">First week learning Cyber Security</h5>
         <p class="card-text post-summary">What I learned my first week looking into cyber security:
 What I learned as a web developer applies. It&rsquo;s more fun to learn than regular web development. It broadens my skill set. TLDR It was an exciting week dipping my toes in cyber security. Links and info I came across during my discovery:
-cat To read plain text files. wget To download files. file To look at the file type. exiftools Read and write meta data. CTFTime Competitive events. picoCTF Learn and compete against others. Kali Linux Linux for hackers. Intro to API hacking A lot of what I learned as a web developer applies I was going through PicoCTF and solving the beginner challenges. The experience was to going through the usual way of how I would debug an issue in my application.
-</p>
-      </a>
-      
+cat To read plain text files. wget To download files. file To look at the file type. exiftools Read and write meta data.</p>
+      </div>
+      <div class="card-footer">
+
+        <a
+        href="/posts/cyber_security_week/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
     </div>
-    <div class="card-footer">
-      <span class="float-start">
-          Tuesday, November 1, 2022
-          </span>
-      <a
-      href="/posts/cyber_security_week/"
-      class="float-end btn btn-outline-info btn-sm">Read</a>
-    </div>
-  </div>
+  </a>
 </div>
 
         
       
         
           <div class="post-card">
-  <div class="card">
-    <div class="card-head">
-      <a href="/posts/achievements/" class="post-card-link">
+  <a href="/posts/achievements/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
         <img class="card-img-top" src='/images/generated/square-17.png' alt="Hero Image">
-      </a>
-    </div>
-    <div class="card-body">
-      <a href="/posts/achievements/" class="post-card-link">
+      </div>
+      <div class="card-body">
         <h5 class="card-title">Achievements</h5>
         <p class="card-text post-summary">Achievements Became an Industry Mentor for Oregon Status University (2022)
 What: I mentor students for the Software Innovation Lab at OSU&rsquo;s College of Engineering.
@@ -342,208 +273,182 @@ My Role: Industry Mentor.
 Contributed to business acquisition (2018)
 What: I built a cloud product for a small business
 Impact: The business was acquired by a larger company partly due to the product I built.
-My Role: Technical lead, architect and developer.
-</p>
-      </a>
-      
+My Role: Technical lead, architect and developer.</p>
+      </div>
+      <div class="card-footer">
+
+        <a
+        href="/posts/achievements/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
     </div>
-    <div class="card-footer">
-      <span class="float-start">
-          Monday, October 10, 2022
-          </span>
-      <a
-      href="/posts/achievements/"
-      class="float-end btn btn-outline-info btn-sm">Read</a>
-    </div>
-  </div>
+  </a>
 </div>
 
         
       
         
           <div class="post-card">
-  <div class="card">
-    <div class="card-head">
-      <a href="/posts/art_first_look/" class="post-card-link">
+  <a href="/posts/art_first_look/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
         <img class="card-img-top" src='/images/generated/night-moons-dark.png' alt="Hero Image">
-      </a>
-    </div>
-    <div class="card-body">
-      <a href="/posts/art_first_look/" class="post-card-link">
+      </div>
+      <div class="card-body">
         <h5 class="card-title">A first look at generated art (golang)</h5>
         <p class="card-text post-summary">I wanted to start something, something that I can work on without the pressure of doing it well. For all you software developers out there, you know what I mean. You want to go back to a time when you developed software because you were curious and not because a customer is asking for a bug fix.
-Enter generated art. I am not an artist. I don&rsquo;t have an artistic bone in my body. But I can code. Art is something that has been missing in my life. I feel left out not being able to create art, or at least enjoy what I have created. So, when I discovered how easy it was to create art with code, I got excited. Oh, and I didn&rsquo;t want anything difficult to learn. You know, cuz I&rsquo;m getting old.
-</p>
-      </a>
-      
+Enter generated art. I am not an artist. I don&rsquo;t have an artistic bone in my body.</p>
+      </div>
+      <div class="card-footer">
+
+        <a
+        href="/posts/art_first_look/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
     </div>
-    <div class="card-footer">
-      <span class="float-start">
-          Monday, August 8, 2022
-          </span>
-      <a
-      href="/posts/art_first_look/"
-      class="float-end btn btn-outline-info btn-sm">Read</a>
-    </div>
-  </div>
+  </a>
 </div>
 
         
       
         
           <div class="post-card">
-  <div class="card">
-    <div class="card-head">
-      <a href="/posts/generated/generated_code/" class="post-card-link">
+  <a href="/posts/generated/generated_code/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
         <img class="card-img-top" src='/images/generated/square-1.png' alt="Hero Image">
-      </a>
-    </div>
-    <div class="card-body">
-      <a href="/posts/generated/generated_code/" class="post-card-link">
+      </div>
+      <div class="card-body">
         <h5 class="card-title">Generated Art</h5>
         <p class="card-text post-summary">Starting with generated art (using Golang). What is it? It&rsquo;s digital art created by code.
 What I like about it You can produce a ton of work in a short amount of time. I don&rsquo;t have a degree in art and never really been an artist, but generated art if easy for someone who can code to pick up. It&rsquo;s basic coding with basic math involved.
-Getting started If you&rsquo;re like me, getting up and running is what I need first. It speeds up my progress if I can iterate on things.
-</p>
-      </a>
-      
+Getting started If you&rsquo;re like me, getting up and running is what I need first.</p>
+      </div>
+      <div class="card-footer">
+
+        <a
+        href="/posts/generated/generated_code/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
     </div>
-    <div class="card-footer">
-      <span class="float-start">
-          Wednesday, June 8, 2022
-          </span>
-      <a
-      href="/posts/generated/generated_code/"
-      class="float-end btn btn-outline-info btn-sm">Read</a>
-    </div>
-  </div>
+  </a>
 </div>
 
         
       
         
           <div class="post-card">
-  <div class="card">
-    <div class="card-head">
-      <a href="/posts/i_got_this/" class="post-card-link">
+  <a href="/posts/i_got_this/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
         <img class="card-img-top" src='/images/generated/steampunk-binarytree.png' alt="Hero Image">
-      </a>
-    </div>
-    <div class="card-body">
-      <a href="/posts/i_got_this/" class="post-card-link">
+      </div>
+      <div class="card-body">
         <h5 class="card-title">I got this! No, I don&#39;t</h5>
         <p class="card-text post-summary">I confess, I have failed. I was given an assignment with an unrealistic timeline, but I still believed that I could complete it with sufficient effort, focus, and late nights. However, I did not meet the deadline. Is it acceptable for a programmer, let alone a consultant, to acknowledge failure? Perhaps.
-Lessons learned. I attribute my failure to my lack of communication and the bravado I displayed thinking that &ldquo;I got this!&rdquo;.
-</p>
-      </a>
-      
+Lessons learned. I attribute my failure to my lack of communication and the bravado I displayed thinking that &ldquo;I got this!</p>
+      </div>
+      <div class="card-footer">
+
+        <a
+        href="/posts/i_got_this/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
     </div>
-    <div class="card-footer">
-      <span class="float-start">
-          Wednesday, June 8, 2022
-          </span>
-      <a
-      href="/posts/i_got_this/"
-      class="float-end btn btn-outline-info btn-sm">Read</a>
-    </div>
-  </div>
+  </a>
 </div>
 
         
       
         
           <div class="post-card">
-  <div class="card">
-    <div class="card-head">
-      <a href="/posts/beaver-to-nsq/" class="post-card-link">
+  <a href="/posts/beaver-to-nsq/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
         <img class="card-img-top" src='/images/generated/night-moons.png' alt="Hero Image">
-      </a>
-    </div>
-    <div class="card-body">
-      <a href="/posts/beaver-to-nsq/" class="post-card-link">
+      </div>
+      <div class="card-body">
         <h5 class="card-title">Beaver to NSQ</h5>
         <p class="card-text post-summary">Beaver to NSQ Configuring Beaver as a producer for nsq.
 For the examples below, 172.17.42.1 was used as the docker host IP. Change the example to the docker host ip in your environment.
 Links Video on setup. Quick Elk. A quick way to get an ELK stack running in your environment. Beaver configuration Set the output of Beaver to be an HTTP POST to nsqd.
-[beaver] logstash_version: 1transport: httphttp_url: http://172.17.42.1:4151/put?topic=test[in.log]Setting up nsqd to listent to that port is documented on a different readme in this directory.
-</p>
-      </a>
-      
+[beaver] logstash_version: 1transport: httphttp_url: http://172.</p>
+      </div>
+      <div class="card-footer">
+
+        <a
+        href="/posts/beaver-to-nsq/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
     </div>
-    <div class="card-footer">
-      <span class="float-start">
-          Tuesday, June 8, 2021
-          </span>
-      <a
-      href="/posts/beaver-to-nsq/"
-      class="float-end btn btn-outline-info btn-sm">Read</a>
-    </div>
-  </div>
+  </a>
 </div>
 
         
       
         
           <div class="post-card">
-  <div class="card">
-    <div class="card-head">
-      <a href="/posts/beaver/" class="post-card-link">
+  <a href="/posts/beaver/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
         <img class="card-img-top" src='/images/circle.png' alt="Hero Image">
-      </a>
-    </div>
-    <div class="card-body">
-      <a href="/posts/beaver/" class="post-card-link">
+      </div>
+      <div class="card-body">
         <h5 class="card-title">Intro to Python&#39;s Beaver</h5>
         <p class="card-text post-summary">Leave it (the logging) to Beaver This post shows you how to get started with beaver.
 Follow the installation instructions in the Github page.
 The Setup Run the following in order to determine if you have beaver up.
 beaver -h That should give you the manual.
-What we are going to do is simple. Have beaver listen to a file and then output to stdout. It&rsquo;s a simple simulation of beaver listening to a log file and processing it&rsquo;s updates.
-</p>
-      </a>
-      
+What we are going to do is simple. Have beaver listen to a file and then output to stdout. It&rsquo;s a simple simulation of beaver listening to a log file and processing it&rsquo;s updates.</p>
+      </div>
+      <div class="card-footer">
+
+        <a
+        href="/posts/beaver/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
     </div>
-    <div class="card-footer">
-      <span class="float-start">
-          Tuesday, June 8, 2021
-          </span>
-      <a
-      href="/posts/beaver/"
-      class="float-end btn btn-outline-info btn-sm">Read</a>
-    </div>
-  </div>
+  </a>
 </div>
 
         
       
         
           <div class="post-card">
-  <div class="card">
-    <div class="card-head">
-      <a href="/posts/binarytree/" class="post-card-link">
+  <a href="/posts/binarytree/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
         <img class="card-img-top" src='/images/generated/circles-dots.png' alt="Hero Image">
-      </a>
-    </div>
-    <div class="card-body">
-      <a href="/posts/binarytree/" class="post-card-link">
+      </div>
+      <div class="card-body">
         <h5 class="card-title">Working with Binary Trees</h5>
         <p class="card-text post-summary">The goal is to print a binary tree in such a way that each level of the tree is printed in a new line. Also, each level of the tree should be printed from left to right.
 Why is this cool? Because it uses channels to print the different levels of the tree.
 Reference Here is the entire code Let&rsquo;s write some code Our tree definition:
-type Node struct { Value int Left *Node Right *Node } A tree is made up of one or more nodes, hence the Node struct.
-</p>
-      </a>
-      
+type Node struct { Value int Left *Node Right *Node } A tree is made up of one or more nodes, hence the Node struct.</p>
+      </div>
+      <div class="card-footer">
+
+        <a
+        href="/posts/binarytree/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
     </div>
-    <div class="card-footer">
-      <span class="float-start">
-          Tuesday, June 8, 2021
-          </span>
-      <a
-      href="/posts/binarytree/"
-      class="float-end btn btn-outline-info btn-sm">Read</a>
-    </div>
-  </div>
+  </a>
 </div>
 
         
@@ -619,7 +524,7 @@ type Node struct { Value int Left *Node Right *Node } A tree is made up of one o
 
   <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
     <div class="container pt-5">
-      <div class="row text-start">
+      <div class="row text-left">
         
         <div class="col-md-4 col-sm-12">
           <h5>Navigation</h5>
@@ -679,20 +584,6 @@ type Node struct { Value int Left *Node Right *Node } A tree is made up of one o
         
         
           
-          <div class="col-md-4 col-sm-12">
-            <p>Stay up to date with email notification</p>
-            
-              <form method='post' action='https://blogtrottr.com'>
-              <div class="form-group">
-              <input type='email' class="form-control" name='btr_email' placeholder="Enter email"/><br />
-              <input type='hidden' name='btr_url' value='https://rexposadas.github.io//index.xml' />
-              <input type='hidden' name='schedule_type' value='1' />
-              <small id="emailHelp" class="form-text text-muted">By entering your email address, you agree to receive the newsletter of this website.</small>
-              <button type="submit" class="btn btn-info"> Submit </button>
-              </div>
-              </form>
-            
-          </div>
         
       </div>
     </div>
@@ -700,15 +591,15 @@ type Node struct { Value int Left *Node Right *Node } A tree is made up of one o
     
     <hr />
     <div class="container">
-      <div class="row text-start">
+      <div class="row text-left">
         <div class="col-md-4">
-          <a id="theme" href="https://github.com/hugo-toha/toha" target="_blank" rel="noopener">
-            <img src="/images/theme-logo_hu16779671404603505019.png" alt="Toha Theme Logo">
+          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
             Toha
           </a>
         </div>
         <div class="col-md-4 text-center">© 2022 Copyright.</div>
-        <div class="col-md-4 text-end">
+        <div class="col-md-4 text-right">
           <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
           <img
             src="/images/hugo-logo.svg"
@@ -723,11 +614,20 @@ type Node struct { Value int Left *Node Right *Node } A tree is made up of one o
   </footer>
 
 
-    <script src="/application.926f97d960749f517a37a37f04e35ff8e24cf84e5c078869194e04729bcdb8aa.js" integrity="sha256-km&#43;X2WB0n1F6N6N/BONf&#43;OJM&#43;E5cB4hpGU4EcpvNuKo=" defer></script>
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/js/navbar.js"></script>
+<script type="text/javascript" src="/js/plyr.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
 
 
     
-     
+    
+    <script src="/js/list.js"></script>
+
 
     
 </body>
