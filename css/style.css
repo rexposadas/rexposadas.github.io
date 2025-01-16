@@ -303,3 +303,36 @@ a:hover {
         padding: 0 1rem;
     }
 }
+
+/* Highlighted Posts */
+.highlighted-posts {
+    margin-bottom: 4rem;
+}
+
+.post-card.highlight {
+    background: var(--bg-color);
+    border-left: 4px solid var(--accent-color);
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card.highlight:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.post-card.highlight .summary {
+    margin-top: 0.5rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+/* Section Headers */
+.home section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--light-gray);
+    padding-bottom: 0.5rem;
+}
