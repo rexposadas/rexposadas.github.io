@@ -1,46 +1,305 @@
-/* This is empty CSS file intended to be overwritten by user's custom CSS file */
-
-/* ============= Device specific fixes ======= */
-
-/* Large screens such as TV */
-@media only screen and (min-width: 1824px) {
+:root {
+    --primary-color: #2d3436;
+    --accent-color: #0984e3;
+    --bg-color: #ffffff;
+    --text-color: #2d3436;
+    --light-gray: #dfe6e9;
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
-
-@media (max-width: 1400px) {
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
-@media (max-width: 1200px) {
+/* Navigation */
+nav {
+    background-color: var(--bg-color);
+    padding: 1rem 0;
+    margin-bottom: 3rem;
+    border-bottom: 2px solid var(--light-gray);
 }
 
-/* IPad Pro */
-@media (max-width: 1024px) {
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
 }
 
-/*  Large devices (desktops, 992px and up) */
-
-@media (max-width: 992px) {
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
 }
 
-/* Medium devices (tablets, 768px and up) */
-
-@media only screen and (max-width: 768px) {
+nav a:hover {
+    color: var(--accent-color);
 }
 
-/* Small devices (landscape phones, 576px and up) */
-
-@media only screen and (max-width: 576px) {
+/* Typography */
+h1,
+h2,
+h3 {
+    color: var(--primary-color);
+    line-height: 1.3;
 }
 
-/* iPhoneX, iPhone 6,7,8 */
-@media only screen and (max-width: 375px) {
+.page-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
 }
 
-/* Galaxy S5, Moto G4 */
-@media only screen and (max-width: 360px) {
+/* Posts Grid */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
-/* iPhone 5 or before */
-@media only screen and (max-width: 320px) {
+.post-card {
+    background: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.post-card h3 {
+    margin: 0 0 0.5rem 0;
+}
+
+.post-card a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.post-card a:hover {
+    color: var(--accent-color);
+}
+
+/* Single Post */
+.post {
+    background: var(--bg-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post h1 {
+    margin-bottom: 0.5rem;
+}
+
+/* Time/Date */
+time {
+    color: #666;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Content */
+.content {
+    margin-top: 2rem;
+}
+
+/* Footer */
+footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--light-gray);
+    text-align: center;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+}
+
+/* List Page */
+.post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.post-preview {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background: var(--bg-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.post-preview:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.post-preview-content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.post-preview-content h2 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.post-preview-content time {
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.post-preview-content p {
+    color: var(--text-color);
+    opacity: 0.8;
+    margin: 0;
+}
+
+.post-preview-image {
+    flex: 1;
+    max-width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+}
+
+.post-preview-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.post-preview:hover .post-preview-image img {
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .post-preview {
+        flex-direction: column-reverse;
+    }
+
+    .post-preview-image {
+        max-width: 100%;
+        height: 250px;
+        margin-bottom: 1.5rem;
+    }
+
+    .post-preview-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Links */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+/* Add these new styles to your existing CSS file */
+
+.site-footer {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 3rem 0;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--bg-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--bg-color);
+    transform: translateY(-2px);
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .footer-content {
+        padding: 0 1rem;
+    }
 }
