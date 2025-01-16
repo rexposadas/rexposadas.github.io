@@ -1,9 +1,21 @@
 :root {
+    /* Dark Charcoal & Mint Theme */
     --primary-color: #2d3436;
-    --accent-color: #0984e3;
-    --bg-color: #ffffff;
+    /* Dark Charcoal */
+    --accent-color: #00b894;
+    /* Fresh Mint */
+    --bg-color: #f5f6fa;
+    /* Light Background */
     --text-color: #2d3436;
+    /* Charcoal Text */
     --light-gray: #dfe6e9;
+    /* Soft Gray */
+    --card-bg: #ffffff;
+    /* Pure White */
+    --hover-color: #00cec9;
+    /* Bright Mint */
+    --secondary-text: #636e72;
+    /* Medium Gray */
 }
 
 body {
@@ -40,7 +52,7 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--accent-color);
+    color: var(--hover-color);
 }
 
 /* Typography */
@@ -54,6 +66,10 @@ h3 {
 .page-title {
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 0.5rem;
 }
 
 /* Posts Grid */
@@ -65,16 +81,19 @@ h3 {
 }
 
 .post-card {
-    background: var(--bg-color);
+    background: var(--card-bg);
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid var(--light-gray);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
 }
 
 .post-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-color: var(--accent-color);
 }
 
 .post-card h3 {
@@ -88,7 +107,7 @@ h3 {
 }
 
 .post-card a:hover {
-    color: var(--accent-color);
+    color: var(--hover-color);
 }
 
 /* Single Post */
@@ -105,7 +124,7 @@ h3 {
 
 /* Time/Date */
 time {
-    color: #666;
+    color: var(--secondary-text);
     font-size: 0.9rem;
     display: block;
     margin-bottom: 1rem;
@@ -310,8 +329,7 @@ a:hover {
 }
 
 .post-card.highlight {
-    background: var(--bg-color);
-    border-left: 4px solid var(--accent-color);
+    background: linear-gradient(to right, rgba(0, 184, 148, 0.05), transparent);
     padding: 1.5rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -335,4 +353,15 @@ a:hover {
     color: var(--primary-color);
     border-bottom: 2px solid var(--light-gray);
     padding-bottom: 0.5rem;
+    position: relative;
+}
+
+.home section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent-color);
 }
